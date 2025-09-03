@@ -7,9 +7,24 @@ const contactForm = document.getElementById('contactForm');
 
 // Initialiser applikasjonen
 document.addEventListener('DOMContentLoaded', function() {
-    initializeNavigation();
-    initializeScrollEffects();
-    initializeContactForm();
+    console.log('Initialiserer applikasjon...');
+    
+    // Vent litt for å være sikker på at email-config.js er lastet
+    setTimeout(function() {
+        // Initialiser EmailJS med config (ny API)
+        if (window.EMAIL_CONFIG && window.EMAIL_CONFIG.publicKey) {
+            console.log('Initialiserer EmailJS med public key:', window.EMAIL_CONFIG.publicKey);
+            emailjs.init({
+                publicKey: window.EMAIL_CONFIG.publicKey
+            });
+        } else {
+            console.log('ERROR: EMAIL_CONFIG ikke tilgjengelig!');
+        }
+        
+        initializeNavigation();
+        initializeScrollEffects();
+        initializeContactForm();
+    }, 100);
 });
 
 // Navigasjonsfunksjonalitet
@@ -232,22 +247,92 @@ function submitContactForm(data) {
     submitButton.innerHTML = 'Sender...';
     submitButton.disabled = true;
     
-    // Simuler skjemainnsending (erstatt med faktisk API-kall)
-    setTimeout(() => {
-        // Vis suksessmelding
-        showNotification('Takk for din melding! Vi tar kontakt snart.', 'success');
+    // Debug logging
+    console.log('EmailJS tilgjengelig:', typeof emailjs !== 'undefined');
+    console.log('EMAIL_CONFIG tilgjengelig:', typeof window.EMAIL_CONFIG !== 'undefined');
+    console.log('EMAIL_CONFIG innhold:', window.EMAIL_CONFIG);
+    
+    // Sjekk om EmailJS er tilgjengelig
+    if (typeof emailjs !== 'undefined' && emailjs.send && window.EMAIL_CONFIG) {
+        console.log('Prøver å sende e-post via EmailJS...');
         
-        // Nullstill skjema
-        contactForm.reset();
+        // Send e-post via EmailJS
+        const templateParams = {
+            from_company: data.company,
+            from_name: data.name,
+            from_email: data.email,
+            message: data.message,
+            to_name: 'Daniel Møgster',
+            to_email: 'mogsterdaniel@gmail.com',
+            reply_to: data.email
+        };
+        
+        console.log('Template parametere:', templateParams);
+        
+        emailjs.send(window.EMAIL_CONFIG.serviceId, window.EMAIL_CONFIG.templateId, templateParams)
+            .then(function(response) {
+                console.log('E-post sendt!', response.status, response.text);
+                
+                // Vis suksessmelding
+                showNotification('Takk for din melding! Vi tar kontakt snart.', 'success');
+                
+                // Nullstill skjema
+                contactForm.reset();
+                
+            }, function(error) {
+                console.log('Feil ved sending av e-post:', error);
+                console.log('Feiltype:', error.status, error.text);
+                
+                // Fallback til mailto
+                openMailtoFallback(data);
+            })
+            .finally(function() {
+                // Nullstill knapp
+                submitButton.innerHTML = originalText;
+                submitButton.disabled = false;
+            });
+    } else {
+        console.log('EmailJS ikke tilgjengelig, bruker fallback');
+        console.log('emailjs definert:', typeof emailjs !== 'undefined');
+        console.log('emailjs.send definert:', typeof emailjs !== 'undefined' && typeof emailjs.send !== 'undefined');
+        console.log('EMAIL_CONFIG definert:', typeof window.EMAIL_CONFIG !== 'undefined');
+        
+        // Fallback til mailto hvis EmailJS ikke er tilgjengelig
+        openMailtoFallback(data);
         
         // Nullstill knapp
         submitButton.innerHTML = originalText;
         submitButton.disabled = false;
-        
-        // I en ekte applikasjon ville du sendt dataene til backend:
-        console.log('Form data to submit:', data);
-        
-    }, 1500);
+    }
+}
+
+// Fallback funksjon som åpner mailto
+function openMailtoFallback(data) {
+    const subject = encodeURIComponent(`Henvendelse fra ${data.company} - ${data.name}`);
+    const body = encodeURIComponent(`
+Hei Gruppe 8,
+
+Bedrift: ${data.company}
+Navn: ${data.name}
+E-post: ${data.email}
+
+Melding:
+${data.message || 'Ingen melding oppgitt'}
+
+Mvh,
+${data.name}
+    `);
+    
+    const mailtoLink = `mailto:mogsterdaniel@gmail.com?subject=${subject}&body=${body}`;
+    
+    // Åpne mailto
+    window.location.href = mailtoLink;
+    
+    // Vis melding til bruker
+    showNotification('Åpner e-postklienten din. Hvis den ikke åpnes automatisk, send direkte til mogsterdaniel@gmail.com', 'info');
+    
+    // Nullstill skjema
+    contactForm.reset();
 }
 
 // Vis varsling
@@ -259,7 +344,7 @@ function showNotification(message, type = 'info') {
     notification.className = `notification notification-${type}`;
     notification.innerHTML = `
         <div class="notification-content">
-            <i class="fas ${type === 'success' ? 'fa-check-circle' : 'fa-info-circle'}"></i>
+            <i class="fas ${type === 'success' ? 'fa-check-circle' : type === 'error' ? 'fa-exclamation-circle' : 'fa-info-circle'}"></i>
             <span>${message}</span>
         </div>
         <button class="notification-close">
@@ -271,7 +356,7 @@ function showNotification(message, type = 'info') {
         position: fixed;
         top: 100px;
         right: 20px;
-        background: ${type === 'success' ? '#10b981' : '#3b82f6'};
+        background: ${type === 'success' ? '#10b981' : type === 'error' ? '#ef4444' : '#3b82f6'};
         color: white;
         padding: 16px 20px;
         border-radius: 8px;

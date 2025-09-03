@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 </head>
 <body>
     <!-- Navigasjon -->
@@ -58,7 +59,7 @@
     <section id="about" class="about-section">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Om Gruppe 8</h2>
+                <h2 class="section-title">Om Oss</h2>
                 <p class="section-subtitle">Fem studenter med komplementære ferdigheter</p>
             </div>
             
@@ -117,6 +118,13 @@
                         <div class="value-content">
                             <h4>Åpen Kommunikasjon</h4>
                             <p>Vi tror på transparens og ærlig tilbakemelding i alle prosesser.</p>
+                        </div>
+                    </div>
+                    <div class="value-item">
+                        <span class="value-number">05</span>
+                        <div class="value-content">
+                            <h4>Innovasjon og Kreativitet</h4>
+                            <p>Vi utforsker nye løsninger og tenker utenfor boksen for å skape verdi.</p>
                         </div>
                     </div>
                 </div>
@@ -328,59 +336,93 @@
             
             <div class="projects-grid">
                 <div class="project-category">
-                    <div class="category-icon">
-                        <i class="fas fa-laptop-code"></i>
+                    <div class="category-icon-container">
+                        <div class="category-icon">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
                     </div>
-                    <h3>Webutvikling</h3>
-                    <p>Vi lager moderne nettsteder og webapplikasjoner med fokus på brukervennlighet og responsivt design.</p>
-                    <ul class="category-list">
-                        <li>Responsive nettsider</li>
-                        <li>E-handelssløsninger</li>
-                        <li>Content Management Systems</li>
-                        <li>Single Page Applications</li>
-                    </ul>
+                    <div class="category-content">
+                        <h3>Webutvikling</h3>
+                        <p>Vi lager moderne nettsteder og webapplikasjoner med fokus på brukervennlighet og responsivt design.</p>
+                        <ul class="category-list">
+                            <li>Responsive nettsider</li>
+                            <li>E-handelssløsninger</li>
+                            <li>Content Management Systems</li>
+                            <li>Single Page Applications</li>
+                        </ul>
+                    </div>
                 </div>
                 
                 <div class="project-category">
-                    <div class="category-icon">
-                        <i class="fas fa-database"></i>
+                    <div class="category-icon-container">
+                        <div class="category-icon">
+                            <i class="fas fa-database"></i>
+                        </div>
                     </div>
-                    <h3>Dataanalyse</h3>
-                    <p>Vi hjelper med å analysere data og lage rapporter som gir innsikt i forretningsdata.</p>
-                    <ul class="category-list">
-                        <li>Datavisualisering</li>
-                        <li>Business Intelligence</li>
-                        <li>Rapportering</li>
-                        <li>Statistisk analyse</li>
-                    </ul>
+                    <div class="category-content">
+                        <h3>Dataanalyse</h3>
+                        <p>Vi hjelper med å analysere data og lage rapporter som gir innsikt i forretningsdata.</p>
+                        <ul class="category-list">
+                            <li>Datavisualisering</li>
+                            <li>Business Intelligence</li>
+                            <li>Rapportering</li>
+                            <li>Statistisk analyse</li>
+                        </ul>
+                    </div>
                 </div>
                 
                 <div class="project-category">
-                    <div class="category-icon">
-                        <i class="fas fa-shield-alt"></i>
+                    <div class="category-icon-container">
+                        <div class="category-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
                     </div>
-                    <h3>IT-sikkerhet</h3>
-                    <p>Vi jobber med sikkerhetsvurderinger og implementering av sikkerhetstiltak.</p>
-                    <ul class="category-list">
-                        <li>Sikkerhetsevaluering</li>
-                        <li>Sikre utviklingspraksiser</li>
-                        <li>Risikoanalyse</li>
-                        <li>Sikkerhetsdokumentasjon</li>
-                    </ul>
+                    <div class="category-content">
+                        <h3>IT-sikkerhet</h3>
+                        <p>Vi jobber med sikkerhetsvurderinger og implementering av sikkerhetstiltak.</p>
+                        <ul class="category-list">
+                            <li>Sikkerhetsevaluering</li>
+                            <li>Sikre utviklingspraksiser</li>
+                            <li>Risikoanalyse</li>
+                            <li>Sikkerhetsdokumentasjon</li>
+                        </ul>
+                    </div>
                 </div>
                 
                 <div class="project-category">
-                    <div class="category-icon">
-                        <i class="fas fa-tasks"></i>
+                    <div class="category-icon-container">
+                        <div class="category-icon">
+                            <i class="fas fa-tasks"></i>
+                        </div>
                     </div>
-                    <h3>Prosjektledelse</h3>
-                    <p>Vi bidrar til planlegging og koordinering av IT-prosjekter og utviklingsprosesser.</p>
-                    <ul class="category-list">
-                        <li>Prosjektplanlegging</li>
-                        <li>Smidig utvikling</li>
-                        <li>Teamkoordinering</li>
-                        <li>Dokumentasjon</li>
-                    </ul>
+                    <div class="category-content">
+                        <h3>Prosjektledelse</h3>
+                        <p>Vi bidrar til planlegging og koordinering av IT-prosjekter og utviklingsprosesser.</p>
+                        <ul class="category-list">
+                            <li>Prosjektplanlegging</li>
+                            <li>Smidig utvikling</li>
+                            <li>Teamkoordinering</li>
+                            <li>Dokumentasjon</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="project-category">
+                    <div class="category-icon-container">
+                        <div class="category-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                    </div>
+                    <div class="category-content">
+                        <h3>Mobilutvikling</h3>
+                        <p>Vi er også interesserte i å utforske mobilapplikasjoner for både iOS og Android med moderne teknologier.</p>
+                        <ul class="category-list">
+                            <li>React Native</li>
+                            <li>Cross-platform utvikling</li>
+                            <li>Brukeropplevelse</li>
+                            <li>App Store publisering</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
 
@@ -420,9 +462,9 @@
         <div class="container">
             <div class="contact-content">
                 <div class="contact-text">
-                    <h2 class="contact-title">Ta Kontakt Med Oss</h2>
+                    <h2 class="contact-title">Knytt Kontakt!</h2>
                     <p class="contact-description">
-                        Vi søker praksisplasser og er åpne for alle typer samarbeid. 
+                        Vi søker praksisplasser og er åpne for alle typer samarbeid. <br>
                         Send oss en melding hvis dere har interessante prosjekter.
                     </p>
                     <div class="contact-highlights">
@@ -486,13 +528,10 @@
                     <a href="tel:+4712345678">+47 48 17 51 17</a>
                 </p>
                 <div class="social-links">
-                    <a href="#" class="social-link">
+                    <a href="https://www.linkedin.com/in/daniel-m%C3%B8gster-14a643228/" target="_blank" class="social-link">
                         <img src="icons/linkedin.svg" alt="LinkedIn">
                     </a>
-                    <a href="#" class="social-link">
-                        <img src="icons/github.svg" alt="GitHub">
-                    </a>
-                    <a href="#" class="social-link">
+                    <a href="mailto:mogsterdaniel@gmail.com" target="_blank" class="social-link">
                         <img src="icons/email.svg" alt="Email">
                     </a>
                 </div>
@@ -506,7 +545,7 @@
             <div class="footer-content">
                 <div class="footer-brand">
                     <span class="logo-text">Gruppe 8</span>
-                    <p>Fem studenter på jakt etter praksis for bachelorprosjekt.</p>
+                    <p>Fem studenter på jakt etter et spennende bachelorprosjekt.</p>
                 </div>
                 <div class="footer-links">
                     <a href="#home">Hjem</a>
@@ -522,6 +561,7 @@
         </div>
     </footer>
 
+    <script src="email-config.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

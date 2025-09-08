@@ -9,23 +9,51 @@ const contactForm = document.getElementById('contactForm');
 document.addEventListener('DOMContentLoaded', function() {
     console.log('Initialiserer applikasjon...');
     
-    // Vent litt for å være sikker på at email-config.js er lastet
-    setTimeout(function() {
-        // Initialiser EmailJS med config (ny API)
-        if (window.EMAIL_CONFIG && window.EMAIL_CONFIG.publicKey) {
-            console.log('Initialiserer EmailJS med public key:', window.EMAIL_CONFIG.publicKey);
-            emailjs.init({
-                publicKey: window.EMAIL_CONFIG.publicKey
-            });
-        } else {
-            console.log('ERROR: EMAIL_CONFIG ikke tilgjengelig!');
-        }
-        
+    // Last email-konfigurasjonen fra API
+    loadEmailConfig().then(() => {
         initializeNavigation();
         initializeScrollEffects();
         initializeContactForm();
-    }, 100);
+    }).catch(error => {
+        console.error('Feil ved lasting av email-konfigurasjon:', error);
+        // Initialiser resten av appen selv om email ikke fungerer
+        initializeNavigation();
+        initializeScrollEffects();
+        initializeContactForm();
+    });
 });
+
+// Last EmailJS-konfigurasjonen
+async function loadEmailConfig() {
+    try {
+        const response = await fetch('/api/config');
+        
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        
+        const config = await response.json();
+        
+        // Lagre konfigurasjonen globalt
+        window.EMAIL_CONFIG = config;
+        
+        // Initialiser EmailJS
+        if (typeof emailjs !== 'undefined') {
+            console.log('Initialiserer EmailJS med config fra API');
+            emailjs.init({
+                publicKey: config.publicKey
+            });
+        } else {
+            console.warn('EmailJS library ikke lastet ennå');
+        }
+        
+        return config;
+        
+    } catch (error) {
+        console.error('Kunne ikke laste email-konfigurasjon:', error);
+        throw error;
+    }
+}
 
 // Navigasjonsfunksjonalitet
 function initializeNavigation() {

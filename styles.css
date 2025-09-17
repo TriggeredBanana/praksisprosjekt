@@ -227,6 +227,17 @@ p {
     color: var(--gray-900);
 }
 
+.logo-link {
+    text-decoration: none;
+    color: inherit;
+    transition: all var(--transition-fast);
+}
+
+.logo-link:hover {
+    opacity: 0.8;
+    transform: scale(1.02);
+}
+
 .nav-menu {
     display: flex;
     list-style: none;
@@ -266,10 +277,11 @@ p {
 .hero {
     min-height: 70vh;
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: center;
-    background: linear-gradient(135deg, var(--gray-50) 0%, var(--gray-100) 100%);
+    background: url('img/gruppebilde_techpoint.JPG') center/cover no-repeat;
     padding: var(--spacing-3xl) 0;
+    position: relative;
 }
 
 .hero-content {
@@ -298,6 +310,12 @@ p {
     gap: var(--spacing-md);
     justify-content: center;
     flex-wrap: wrap;
+}
+
+.hero-buttons .btn {
+    padding: var(--spacing-md) var(--spacing-xl);
+    font-size: 1.125rem;
+    font-weight: 700;
 }
 
 /* Fjern flytende elementer og relaterte stiler */
@@ -977,6 +995,11 @@ section {
 
 /* Responsivt Design */
 @media (max-width: 1200px) {
+    .nav-container {
+        justify-content: space-between;
+        gap: 0;
+    }
+    
     .nav-menu {
         position: fixed;
         left: -100%;
@@ -1079,15 +1102,21 @@ section {
         --spacing-xl: 2rem;
     }
     
-    .hero-buttons {
-        flex-direction: column;
-        align-items: center;
+    .hero {
+        min-height: 50vh;
     }
     
-    .btn {
-        width: 100%;
-        max-width: 280px;
-        justify-content: center;
+    .hero-buttons {
+        flex-direction: row;
+        align-items: center;
+        gap: var(--spacing-sm);
+    }
+    
+    .hero-buttons .btn {
+        padding: var(--spacing-sm) var(--spacing-md);
+        font-size: 1rem;
+        flex: 1;
+        max-width: 140px;
     }
     
     .about-grid {
@@ -1157,7 +1186,7 @@ section {
     }
     
     .hero {
-        min-height: 60vh;
+        min-height: 50vh;
     }
     
     .hero-title {

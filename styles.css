@@ -445,6 +445,61 @@ section {
     margin: 0;
 }
 
+/* Promo Video Seksjon */
+.promo-video-section {
+    padding: var(--spacing-sm) 0 var(--spacing-3xl) 0;
+    background: var(--white);
+}
+
+.video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: var(--spacing-sm);
+}
+
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    aspect-ratio: 16/9;
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    box-shadow: var(--shadow-xl);
+    background: var(--gray-100);
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Responsivt design for videoen */
+@media (max-width: 768px) {
+    .video-wrapper {
+        max-width: 100%;
+        border-radius: var(--radius-lg);
+    }
+    
+    .promo-video-section {
+        padding: var(--spacing-2xl) 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .video-wrapper {
+        border-radius: var(--radius-md);
+    }
+    
+    .promo-video-section {
+        padding: var(--spacing-xl) 0;
+    }
+}
+
 /* Team Seksjon */
 .team-section {
     background: var(--gray-50);

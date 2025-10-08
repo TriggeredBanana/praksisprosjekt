@@ -491,6 +491,233 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- Kartverket Prosjekt -->
+                <div class="previous-project-card" onclick="openProjectModal(this)" data-project-id="kartverket">
+                    <div class="project-card-header">
+                        <div class="project-logo-wrapper kartverket-logo">
+                            <i class="fas fa-map-marked-alt"></i>
+                        </div>
+                        <div class="project-badges">
+                            <span class="project-badge winner">
+                                <i class="fas fa-trophy"></i>
+                                Vinner
+                            </span>
+                            <span class="project-badge academic">
+                                <i class="fas fa-graduation-cap"></i>
+                                Akademisk
+                            </span>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card-body">
+                        <h3 class="project-title">Kartverket</h3>
+                        <p class="project-summary">
+                            Innovativ brukerrapporteringsløsning for Kartverket med GPS-sporing i sanntid, 
+                            som gjør det enklere å melde inn kartfeil direkte fra felt.
+                        </p>
+                        <button class="view-details-btn">
+                            <span>Se Detaljer</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                    
+                    <!-- Detaljerer for modal når den åpnes -->
+                    <div class="project-detailed-content" style="display: none;">
+                        <div class="modal-project-header">
+                            <div class="modal-logo-banner kartverket-banner">
+                                <div class="modal-logo-wrapper kartverket-logo">
+                                    <i class="fas fa-map-marked-alt"></i>
+                                </div>
+                                <div class="modal-badges">
+                                    <span class="project-badge winner">
+                                        <i class="fas fa-trophy"></i>
+                                        Kåret til vinner av ekstern jury (Kartverket)
+                                    </span>
+                                    <span class="project-badge academic">
+                                        <i class="fas fa-graduation-cap"></i>
+                                        Akademisk Prosjekt
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="modal-project-description">
+                            <h3>Om Prosjektet</h3>
+                            <p>
+                                Applikasjonen "Gruppe10KVprototype" er basert på et prosjekt fra Kartverket og har som mål å gjøre brukerrapportering enklere og håndtere ulik geodata. Systemet gir et brukervennlig grensesnitt for å melde inn feil sammen med geolokasjonsdata, og sikrer effektiv håndtering av innmeldinger for saksbehandlere. Gruppens system introduserer en ny og kreativ løsning der innmeldere kan benytte seg av sporing via GPS, som gjør det enklere å melde inn feil mens man er på tur og oppdager feil i kartet.
+                            </p>
+                            
+                            <div class="modal-actions">
+                                <a href="https://github.com/Kristiann96/Gruppe10KV" target="_blank" class="modal-btn btn-github">
+                                    <i class="fab fa-github"></i>
+                                    <span>Se Kildekode på GitHub</span>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="modal-features-section">
+                            <div class="features-header">
+                                <div class="features-icon-large">
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <div>
+                                    <h3>Hovedfunksjoner</h3>
+                                    <p class="features-subtitle">Kraftig verktøy for effektiv kartfeilhåndtering</p>
+                                </div>
+                            </div>
+                            <div class="features-grid">
+                                <div class="feature-item">
+                                    <i class="fas fa-map-pin"></i>
+                                    <h4>Motta innmeldinger</h4>
+                                    <p>Brukere kan melde inn feil på geografiske lokasjoner, inkludert geodata (GeoJSON-format), samt bruke sporing via GPS for å melde inn feil i sanntid.</p>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-tasks"></i>
+                                    <h4>Administratorgjennomgang</h4>
+                                    <p>Saksbehandlere kan effektivt gjennomgå, vurdere, administrere og delegere innmeldinger.</p>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-database"></i>
+                                    <h4>Datakompilering</h4>
+                                    <p>Systemet gir en detaljert oversikt over forskjellige geodata og brukerinnsendte data.</p>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-user-shield"></i>
+                                    <h4>Autentisering og brukeradministrasjon</h4>
+                                    <p>Inkluderer et autentiseringssystem for ulike brukertyper, som gjester og registrerte brukere.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="modal-tech-section">
+                            <h3>Teknologier & Verktøy</h3>
+                            <div class="tech-tags-modal">
+                                <span class="tech-tag">HTML</span>
+                                <span class="tech-tag">CSS</span>
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">C#</span>
+                                <span class="tech-tag">Mermaid</span>
+                                <span class="tech-tag">Docker</span>
+                                <span class="tech-tag">MySQL/MariaDB</span>
+                                <span class="tech-tag">Dapper ORM</span>
+                                <span class="tech-tag">ASP.NET</span>
+                                <span class="tech-tag">Leaflet.js</span>
+                                <span class="tech-tag">API</span>
+                                <span class="tech-tag">Entity Framework & Identity</span>
+                                <span class="tech-tag">PostgreSQL</span>
+                                <span class="tech-tag">PostGIS</span>
+                                <span class="tech-tag">GeoJSON</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Multi Model AI Generator Prosjekt -->
+                <div class="previous-project-card" onclick="openProjectModal(this)" data-project-id="ai-generator">
+                    <div class="project-card-header">
+                        <div class="project-logo-wrapper ai-logo">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <div class="project-badges">
+                            <span class="project-badge hobby">
+                                <i class="fas fa-heart"></i>
+                                Hobbyprosjekt
+                            </span>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card-body">
+                        <h3 class="project-title">Multi Model AI Generator</h3>
+                        <p class="project-summary">
+                            Lokal AI-applikasjon med flere state-of-the-art modeller for bilde- og videogenerering. 
+                            Støtter alle GPU-typer med et intuitivt webgrensesnitt.
+                        </p>
+                        <button class="view-details-btn">
+                            <span>Se Detaljer</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                    
+                    <!-- Detaljerer for modal når den åpnes -->
+                    <div class="project-detailed-content" style="display: none;">
+                        <div class="modal-project-header">
+                            <div class="modal-logo-banner ai-banner">
+                                <div class="modal-logo-wrapper ai-logo">
+                                    <i class="fas fa-brain"></i>
+                                </div>
+                                <div class="modal-badges">
+                                    <span class="project-badge hobby">
+                                        <i class="fas fa-heart"></i>
+                                        Personlig Hobbyprosjekt
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="modal-project-description">
+                            <h3>Om Prosjektet</h3>
+                            <p>
+                                Multi Model AI Generator er en lokal AI-applikasjon som gjør avansert bilde- og videogenerering tilgjengelig for alle. Applikasjonen støtter flere state-of-the-art AI-modeller og kan kjøre på alle typer maskinvare - enten du har NVIDIA GPU, AMD GPU eller bare CPU. Med et brukervennlig webgrensesnitt kan man enkelt eksperimentere med forskjellige modeller og innstillinger for å skape unikt innhold.
+                            </p>
+                            
+                            <div class="modal-actions">
+                                <a href="https://github.com/TriggeredBanana/Multi-Model-AI-Generator" target="_blank" class="modal-btn btn-github">
+                                    <i class="fab fa-github"></i>
+                                    <span>Se Kildekode på GitHub</span>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="modal-features-section">
+                            <div class="features-header">
+                                <div class="features-icon-large">
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <div>
+                                    <h3>Hovedfunksjoner</h3>
+                                    <p class="features-subtitle">Avansert AI-teknologi gjort tilgjengelig</p>
+                                </div>
+                            </div>
+                            <div class="features-grid">
+                                <div class="feature-item">
+                                    <i class="fas fa-layer-group"></i>
+                                    <h4>Multi-modell støtte</h4>
+                                    <p>Integrasjon med flere ledende AI-modeller for maksimal fleksibilitet</p>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-microchip"></i>
+                                    <h4>Universell GPU-støtte</h4>
+                                    <p>Fungerer med NVIDIA, AMD og CPU - ingen spesialhardware nødvendig</p>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-lock"></i>
+                                    <h4>Lokal kjøring</h4>
+                                    <p>Full kontroll over generert data - alt kjøres på din egen maskin</p>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-image"></i>
+                                    <h4>Bilde & Video</h4>
+                                    <p>Generer både statiske bilder og dynamiske videoer</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="modal-tech-section">
+                            <h3>Teknologier & Verktøy</h3>
+                            <div class="tech-tags-modal">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Batchfile</span>
+                                <span class="tech-tag">PyTorch</span>
+                                <span class="tech-tag">Stable Diffusion</span>
+                                <span class="tech-tag">AI/KI</span>
+                                <span class="tech-tag">AI Models & Checkpoints</span>
+                                <span class="tech-tag">LoRA</span>
+                                <span class="tech-tag">AI Image Model - LoRA Training</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         

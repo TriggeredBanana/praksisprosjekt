@@ -741,6 +741,25 @@ section {
     object-fit: contain;
 }
 
+/* Icon-baserte logoer for prosjekter uten bilde */
+.project-logo-wrapper.kartverket-logo {
+    background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%);
+}
+
+.project-logo-wrapper.kartverket-logo i {
+    font-size: 3rem;
+    color: white;
+}
+
+.project-logo-wrapper.ai-logo {
+    background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+}
+
+.project-logo-wrapper.ai-logo i {
+    font-size: 3rem;
+    color: white;
+}
+
 .project-badges {
     display: flex;
     gap: var(--spacing-sm);
@@ -780,6 +799,28 @@ section {
 
 .project-badge.grade i {
     color: #fff;
+}
+
+.project-badge.academic {
+    background: rgba(59, 130, 246, 0.9);
+    color: var(--white);
+    border: 2px solid rgba(96, 165, 250, 1);
+    box-shadow: 0 0 10px rgba(59, 130, 246, 0.3);
+}
+
+.project-badge.academic i {
+    color: #ffffff;
+}
+
+.project-badge.hobby {
+    background: rgba(236, 72, 153, 0.9);
+    color: var(--white);
+    border: 2px solid rgba(244, 114, 182, 1);
+    box-shadow: 0 0 10px rgba(236, 72, 153, 0.3);
+}
+
+.project-badge.hobby i {
+    color: #ffffff;
 }
 
 /* Kort Kropp */
@@ -972,6 +1013,34 @@ section {
     object-fit: contain;
 }
 
+/* Modal banner varianter for forskjellige prosjekter */
+.modal-logo-banner.kartverket-banner {
+    background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%);
+}
+
+.modal-logo-banner.ai-banner {
+    background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+}
+
+/* Icon-baserte logoer i modal */
+.modal-logo-wrapper.kartverket-logo {
+    background: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%);
+}
+
+.modal-logo-wrapper.kartverket-logo i {
+    font-size: 4rem;
+    color: white;
+}
+
+.modal-logo-wrapper.ai-logo {
+    background: linear-gradient(135deg, #a78bfa 0%, #9333ea 100%);
+}
+
+.modal-logo-wrapper.ai-logo i {
+    font-size: 4rem;
+    color: white;
+}
+
 .modal-badges {
     display: flex;
     gap: var(--spacing-sm);
@@ -1014,6 +1083,28 @@ section {
     color: #fff;
 }
 
+.modal-badges .project-badge.academic {
+    background: rgba(59, 130, 246, 0.9);
+    color: var(--white);
+    border: 2px solid rgba(96, 165, 250, 1);
+    box-shadow: 0 0 10px rgba(59, 130, 246, 0.3);
+}
+
+.modal-badges .project-badge.academic i {
+    color: #ffffff;
+}
+
+.modal-badges .project-badge.hobby {
+    background: rgba(236, 72, 153, 0.9);
+    color: var(--white);
+    border: 2px solid rgba(244, 114, 182, 1);
+    box-shadow: 0 0 10px rgba(236, 72, 153, 0.3);
+}
+
+.modal-badges .project-badge.hobby i {
+    color: #ffffff;
+}
+
 /* Modal Beskrivelse */
 .modal-project-description {
     margin-bottom: var(--spacing-2xl);
@@ -1029,6 +1120,33 @@ section {
     color: var(--gray-700);
     line-height: 1.8;
     font-size: 1.0625rem;
+}
+
+/* Feature list i modal */
+.feature-list {
+    list-style: none;
+    padding: 0;
+    margin: var(--spacing-lg) 0;
+}
+
+.feature-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+    color: var(--gray-700);
+    line-height: 1.6;
+}
+
+.feature-list li i {
+    color: var(--primary-color);
+    font-size: 1.25rem;
+    margin-top: 2px;
+    flex-shrink: 0;
+}
+
+.feature-list li strong {
+    color: var(--gray-900);
 }
 
 /* Modal Samarbeids-seksjon */
@@ -1139,6 +1257,115 @@ section {
     margin: 0;
 }
 
+/* Modal Funksjoner-seksjon */
+.modal-features-section {
+    background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+    border-radius: var(--radius-2xl);
+    padding: var(--spacing-2xl);
+    margin-bottom: var(--spacing-2xl);
+    position: relative;
+    overflow: hidden;
+}
+
+.modal-features-section::before {
+    content: '';
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: linear-gradient(135deg, var(--primary-color) 0%, #60a5fa 100%);
+    opacity: 0.05;
+    border-radius: 50%;
+    top: -150px;
+    left: -150px;
+}
+
+.features-header {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-xl);
+}
+
+.features-icon-large {
+    width: 64px;
+    height: 64px;
+    background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+    border-radius: var(--radius-xl);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    box-shadow: var(--shadow-lg);
+}
+
+.features-icon-large i {
+    color: var(--white);
+    font-size: 2rem;
+}
+
+.features-header h3 {
+    color: var(--gray-900);
+    margin: 0;
+    font-size: 1.75rem;
+}
+
+.features-subtitle {
+    color: #0284c7;
+    font-weight: 600;
+    font-size: 1rem;
+    font-style: italic;
+    margin: 0;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: var(--spacing-lg);
+}
+
+.feature-item {
+    background: var(--white);
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-xl);
+    text-align: center;
+    transition: all var(--transition-normal);
+    border: 2px solid #bae6fd;
+    box-shadow: var(--shadow-sm);
+}
+
+.feature-item:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--primary-color);
+    background: linear-gradient(135deg, var(--white) 0%, #f0f9ff 100%);
+}
+
+.feature-item i {
+    width: 48px;
+    height: 48px;
+    background: linear-gradient(135deg, var(--primary-color) 0%, #60a5fa 100%);
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    font-size: 1.25rem;
+    margin-bottom: var(--spacing-md);
+}
+
+.feature-item h4 {
+    color: var(--gray-900);
+    font-size: 1.125rem;
+    margin-bottom: var(--spacing-xs);
+}
+
+.feature-item p {
+    color: var(--gray-600);
+    font-size: 0.9375rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
 /* Modal Teknologi-seksjon */
 .modal-tech-section {
     margin-bottom: var(--spacing-2xl);
@@ -1222,6 +1449,10 @@ section {
     .collaboration-grid {
         grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     }
+    
+    .features-grid {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    }
 }
 
 @media (max-width: 768px) {
@@ -1261,6 +1492,16 @@ section {
     }
     
     .collaboration-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+    
+    .features-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .features-grid {
         grid-template-columns: 1fr;
         gap: var(--spacing-md);
     }

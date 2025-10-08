@@ -664,6 +664,716 @@ section {
     background: var(--white);
 }
 
+/* Tidligere Prosjekter Seksjon */
+.previous-projects-section {
+    background: var(--white);
+    padding: var(--spacing-3xl) 0;
+}
+
+.previous-projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: var(--spacing-xl);
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.previous-project-card {
+    background: var(--white);
+    border-radius: var(--radius-2xl);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    transition: all var(--transition-normal);
+    border: 2px solid var(--gray-200);
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.previous-project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-2xl);
+    border-color: var(--primary-color);
+}
+
+/* Kort Header */
+.project-card-header {
+    background: var(--gradient-primary);
+    padding: var(--spacing-xl);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-md);
+    position: relative;
+    overflow: hidden;
+}
+
+.project-card-header::after {
+    content: '';
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    top: -100px;
+    right: -100px;
+}
+
+.project-logo-wrapper {
+    background: #d64045;
+    padding: var(--spacing-md);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100px;
+    width: 100%;
+    max-width: 280px;
+    position: relative;
+    z-index: 1;
+}
+
+.project-logo {
+    max-height: 70px;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+.project-badges {
+    display: flex;
+    gap: var(--spacing-sm);
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+}
+
+.project-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    padding: var(--spacing-xs) var(--spacing-md);
+    border-radius: var(--radius-lg);
+    font-weight: 600;
+    font-size: 0.875rem;
+    backdrop-filter: blur(10px);
+    transition: all var(--transition-fast);
+}
+
+.project-badge.winner {
+    background: rgba(255, 215, 0, 0.2);
+    color: var(--white);
+    border: 2px solid rgba(255, 215, 0, 0.5);
+}
+
+.project-badge.winner i {
+    color: #ffd700;
+}
+
+.project-badge.grade {
+    background: rgba(255, 255, 255, 0.2);
+    color: var(--white);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.project-badge.grade i {
+    color: #fff;
+}
+
+/* Kort Kropp */
+.project-card-body {
+    padding: var(--spacing-xl);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.project-title {
+    color: var(--gray-900);
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.project-summary {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--gray-600);
+    margin: 0;
+    flex: 1;
+}
+
+.view-details-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-sm) var(--spacing-lg);
+    background: var(--gradient-primary);
+    color: var(--white);
+    border: none;
+    border-radius: var(--radius-lg);
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all var(--transition-normal);
+    margin-top: auto;
+}
+
+.view-details-btn:hover {
+    transform: translateX(4px);
+    box-shadow: var(--shadow-lg);
+}
+
+.view-details-btn i {
+    transition: transform var(--transition-fast);
+}
+
+.view-details-btn:hover i {
+    transform: translateX(4px);
+}
+
+/* Prosjekt Modal */
+.project-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    z-index: 2000;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-lg);
+    opacity: 0;
+    transition: opacity var(--transition-normal);
+}
+
+.project-modal.active {
+    opacity: 1;
+}
+
+.modal-content {
+    background: var(--white);
+    border-radius: var(--radius-2xl);
+    max-width: 900px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    transform: scale(0.9) translateY(20px);
+    transition: transform var(--transition-normal);
+    box-shadow: var(--shadow-2xl);
+}
+
+.project-modal.active .modal-content {
+    transform: scale(1) translateY(0);
+}
+
+.modal-close {
+    position: sticky;
+    top: var(--spacing-md);
+    right: var(--spacing-md);
+    float: right;
+    width: 48px;
+    height: 48px;
+    background: var(--white);
+    border: 2px solid var(--gray-200);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    z-index: 10;
+    margin-bottom: calc(-48px - var(--spacing-md));
+    box-shadow: var(--shadow-md);
+}
+
+.modal-close:hover {
+    background: var(--gray-100);
+    border-color: var(--primary-color);
+    transform: rotate(90deg);
+}
+
+.modal-close i {
+    color: var(--gray-700);
+    font-size: 1.25rem;
+}
+
+.modal-body {
+    padding: var(--spacing-2xl);
+}
+
+/* Modal Prosjekt Header */
+.modal-project-header {
+    margin-bottom: var(--spacing-xl);
+}
+
+.modal-logo-banner {
+    background: var(--gradient-primary);
+    padding: var(--spacing-2xl) var(--spacing-xl);
+    margin: calc(-1 * var(--spacing-2xl)) calc(-1 * var(--spacing-2xl)) 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-lg);
+    position: relative;
+    overflow: hidden;
+    min-height: 180px;
+    padding-bottom: var(--spacing-xl);
+}
+
+.modal-logo-banner::before {
+    content: '';
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    top: -150px;
+    right: -150px;
+}
+
+.modal-logo-banner::after {
+    content: '';
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+    bottom: -125px;
+    left: -125px;
+}
+
+.modal-logo-wrapper {
+    background: #d64045;
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-xl);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+    min-width: 320px;
+    min-height: 120px;
+}
+
+.modal-project-logo {
+    max-height: 100px;
+    width: auto;
+    max-width: 380px;
+    object-fit: contain;
+}
+
+.modal-badges {
+    display: flex;
+    gap: var(--spacing-sm);
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+    margin-bottom: var(--spacing-xl);
+}
+
+.modal-badges .project-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    padding: var(--spacing-xs) var(--spacing-md);
+    border-radius: var(--radius-lg);
+    font-weight: 600;
+    font-size: 0.875rem;
+    backdrop-filter: blur(10px);
+    transition: all var(--transition-fast);
+}
+
+.modal-badges .project-badge.winner {
+    background: rgba(255, 215, 0, 0.2);
+    color: var(--white);
+    border: 2px solid rgba(255, 215, 0, 0.5);
+}
+
+.modal-badges .project-badge.winner i {
+    color: #ffd700;
+}
+
+.modal-badges .project-badge.grade {
+    background: rgba(255, 255, 255, 0.2);
+    color: var(--white);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.modal-badges .project-badge.grade i {
+    color: #fff;
+}
+
+/* Modal Beskrivelse */
+.modal-project-description {
+    margin-bottom: var(--spacing-2xl);
+}
+
+.modal-project-description h3 {
+    color: var(--gray-900);
+    margin-bottom: var(--spacing-md);
+    font-size: 1.5rem;
+}
+
+.modal-project-description p {
+    color: var(--gray-700);
+    line-height: 1.8;
+    font-size: 1.0625rem;
+}
+
+/* Modal Samarbeids-seksjon */
+.modal-collaboration {
+    background: linear-gradient(135deg, var(--gray-50) 0%, var(--gray-100) 100%);
+    border-radius: var(--radius-2xl);
+    padding: var(--spacing-2xl);
+    margin-bottom: var(--spacing-2xl);
+    position: relative;
+    overflow: hidden;
+}
+
+.modal-collaboration::before {
+    content: '';
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: var(--gradient-primary);
+    opacity: 0.05;
+    border-radius: 50%;
+    top: -150px;
+    right: -150px;
+}
+
+.collaboration-header {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-xl);
+}
+
+.collaboration-icon-large {
+    width: 64px;
+    height: 64px;
+    background: var(--gradient-primary);
+    border-radius: var(--radius-xl);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    box-shadow: var(--shadow-lg);
+}
+
+.collaboration-icon-large i {
+    color: var(--white);
+    font-size: 2rem;
+}
+
+.collaboration-header h3 {
+    color: var(--gray-900);
+    margin: 0;
+    font-size: 1.75rem;
+}
+
+.collaboration-subtitle {
+    color: var(--primary-color);
+    font-weight: 600;
+    font-size: 1rem;
+    font-style: italic;
+    margin: 0;
+}
+
+.collaboration-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: var(--spacing-lg);
+}
+
+.collaboration-item {
+    background: var(--white);
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-xl);
+    text-align: center;
+    transition: all var(--transition-normal);
+    border: 2px solid var(--gray-200);
+    box-shadow: var(--shadow-sm);
+}
+
+.collaboration-item:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--primary-color);
+}
+
+.collaboration-item i {
+    width: 48px;
+    height: 48px;
+    background: var(--gradient-primary);
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    font-size: 1.25rem;
+    margin-bottom: var(--spacing-md);
+}
+
+.collaboration-item h4 {
+    color: var(--gray-900);
+    font-size: 1.125rem;
+    margin-bottom: var(--spacing-xs);
+}
+
+.collaboration-item p {
+    color: var(--gray-600);
+    font-size: 0.9375rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Modal Teknologi-seksjon */
+.modal-tech-section {
+    margin-bottom: var(--spacing-2xl);
+}
+
+.modal-tech-section h3 {
+    color: var(--gray-900);
+    margin-bottom: var(--spacing-md);
+    font-size: 1.5rem;
+}
+
+.tech-tags-modal {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+}
+
+.tech-tags-modal .tech-tag {
+    background: var(--gray-100);
+    color: var(--gray-700);
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: var(--radius-lg);
+    font-size: 0.9375rem;
+    font-weight: 600;
+    border: 1px solid var(--gray-200);
+    transition: all var(--transition-fast);
+}
+
+/* Modal Handlinger */
+.modal-actions {
+    display: flex;
+    gap: var(--spacing-md);
+    padding-top: var(--spacing-xl);
+    border-top: 2px solid var(--gray-200);
+}
+
+.modal-btn {
+    flex: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-md) var(--spacing-lg);
+    border-radius: var(--radius-lg);
+    font-weight: 600;
+    text-decoration: none;
+    transition: all var(--transition-normal);
+    font-size: 1rem;
+}
+
+.modal-btn.btn-github {
+    background: var(--gray-900);
+    color: var(--white);
+    box-shadow: var(--shadow-md);
+}
+
+.modal-btn.btn-github:hover {
+    background: var(--gray-800);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+.modal-btn.btn-demo {
+    background: var(--gradient-primary);
+    color: var(--white);
+    box-shadow: var(--shadow-md);
+}
+
+.modal-btn.btn-demo:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+    filter: brightness(1.1);
+}
+
+/* Responsivt Design */
+@media (max-width: 1024px) {
+    .previous-projects-grid {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    }
+    
+    .collaboration-grid {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .previous-projects-section {
+        padding: var(--spacing-2xl) 0;
+    }
+    
+    .previous-projects-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+    
+    .project-card-header {
+        padding: var(--spacing-lg);
+    }
+    
+    .project-logo-wrapper {
+        max-width: 240px;
+        min-height: 80px;
+    }
+    
+    .project-logo {
+        max-height: 60px;
+    }
+    
+    .project-card-body {
+        padding: var(--spacing-lg);
+    }
+    
+    .modal-body {
+        padding: var(--spacing-lg);
+    }
+    
+    .collaboration-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .collaboration-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+    
+    .modal-actions {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .previous-projects-section {
+        padding: var(--spacing-xl) 0;
+    }
+    
+    .project-modal {
+        padding: var(--spacing-sm);
+    }
+    
+    .modal-content {
+        border-radius: var(--radius-xl);
+    }
+    
+    .modal-close {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .modal-body {
+        padding: var(--spacing-md);
+    }
+    
+    .project-card-header {
+        padding: var(--spacing-md);
+    }
+    
+    .project-logo-wrapper {
+        max-width: 200px;
+        min-height: 70px;
+        padding: var(--spacing-sm);
+    }
+    
+    .project-logo {
+        max-height: 50px;
+    }
+    
+    .project-badge {
+        font-size: 0.8rem;
+        padding: 4px var(--spacing-sm);
+    }
+    
+    .project-card-body {
+        padding: var(--spacing-md);
+    }
+    
+    .project-title {
+        font-size: 1.25rem;
+    }
+    
+    .project-summary {
+        font-size: 0.95rem;
+    }
+    
+    .modal-logo-banner {
+        padding: var(--spacing-xl) var(--spacing-md);
+        min-height: 140px;
+        margin: calc(-1 * var(--spacing-lg)) calc(-1 * var(--spacing-lg)) 0;
+        gap: var(--spacing-md);
+    }
+    
+    .modal-logo-wrapper {
+        min-width: 240px;
+        min-height: 100px;
+        padding: var(--spacing-md);
+    }
+    
+    .modal-project-logo {
+        max-height: 80px;
+        max-width: 280px;
+    }
+    
+    .modal-badges {
+        padding: 0;
+        margin-bottom: var(--spacing-lg);
+    }
+    
+    .modal-badges .project-badge {
+        font-size: 0.8rem;
+        padding: 4px var(--spacing-sm);
+    }
+    
+    .collaboration-icon-large {
+        width: 56px;
+        height: 56px;
+    }
+    
+    .collaboration-icon-large i {
+        font-size: 1.75rem;
+    }
+    
+    .collaboration-header h3 {
+        font-size: 1.5rem;
+    }
+    
+    .modal-collaboration {
+        padding: var(--spacing-lg);
+    }
+}
+
+/* Prosjekter Seksjon */
+.projects-section {
+    background: var(--white);
+}
+
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(6, 1fr);

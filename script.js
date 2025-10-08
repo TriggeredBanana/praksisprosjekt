@@ -447,3 +447,52 @@ ta gjerne kontakt!
 Mvh,
 Gruppe 8 💻
 `);
+
+// Åpne prosjekt modal
+function openProjectModal(card) {
+    const modal = document.getElementById('projectModal');
+    const modalBody = document.getElementById('modalBody');
+    const detailedContent = card.querySelector('.project-detailed-content');
+    
+    if (detailedContent && modal && modalBody) {
+        // Klon innholdet
+        modalBody.innerHTML = detailedContent.innerHTML;
+        
+        // Vis modal med animasjon
+        modal.style.display = 'flex';
+        document.body.style.overflow = 'hidden';
+        
+        // Utløs animasjon
+        setTimeout(() => {
+            modal.classList.add('active');
+        }, 10);
+    }
+}
+
+// Lukk prosjekt modal
+function closeProjectModal(event) {
+    const modal = document.getElementById('projectModal');
+    
+    if (modal) {
+        modal.classList.remove('active');
+        
+        setTimeout(() => {
+            modal.style.display = 'none';
+            document.body.style.overflow = '';
+            
+            // Tøm innhold
+            const modalBody = document.getElementById('modalBody');
+            if (modalBody) {
+                modalBody.innerHTML = '';
+            }
+        }, 300);
+    }
+}
+
+// Lukk modal med Escape-tast
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+        closeProjectModal();
+    }
+});
+

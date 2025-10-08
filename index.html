@@ -24,7 +24,8 @@
                 <li><a href="#about" class="nav-link">Om Oss</a></li>
                 <li><a href="#video" class="nav-link">Promovideo</a></li>
                 <li><a href="#team" class="nav-link">Teamet</a></li>
-                <li><a href="#projects" class="nav-link">Prosjekter</a></li>
+                <li><a href="#previous-projects" class="nav-link">Tidligere Prosjekter</a></li>
+                <li><a href="#projects" class="nav-link">Interesser</a></li>
                 <li><a href="#contact" class="nav-link">Kontakt</a></li>
             </ul>
             <div class="hamburger">
@@ -358,7 +359,160 @@
         </div>
     </section>
 
+    <!-- Tidligere Prosjekter Seksjon -->
+    <section id="previous-projects" class="previous-projects-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Tidligere Prosjekter</h2>
+                <p class="section-subtitle">En samling av våre tidligere arbeider og prestasjoner</p>
+            </div>
+            
+            <div class="previous-projects-grid">
+                <!-- SafeShelter Prosjekt -->
+                <div class="previous-project-card" onclick="openProjectModal(this)" data-project-id="safeshelter">
+                    <div class="project-card-header">
+                        <div class="project-logo-wrapper">
+                            <img src="img/SafeShelter_logo.png" alt="SafeShelter Logo" class="project-logo">
+                        </div>
+                        <div class="project-badges">
+                            <span class="project-badge winner">
+                                <i class="fas fa-trophy"></i>
+                                Vinner
+                            </span>
+                            <span class="project-badge grade">
+                                <i class="fas fa-star"></i>
+                                Karakter A
+                            </span>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card-body">
+                        <h3 class="project-title">SafeShelter</h3>
+                        <p class="project-summary">
+                            Fullstack geografisk beredskapsløsning som kombinerer sanntidsposisjonering 
+                            med visualisering av tilfluktsrom og sikkerhetsfasiliteter.
+                        </p>
+                        <button class="view-details-btn">
+                            <span>Se Detaljer</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                    
+                    <!-- Detaljerer for modal når den åpnes -->
+                    <div class="project-detailed-content" style="display: none;">
+                        <div class="modal-project-header">
+                            <div class="modal-logo-banner">
+                                <div class="modal-logo-wrapper">
+                                    <img src="img/SafeShelter_logo.png" alt="SafeShelter Logo" class="modal-project-logo">
+                                </div>
+                                <div class="modal-badges">
+                                    <span class="project-badge winner">
+                                        <i class="fas fa-trophy"></i>
+                                        Kåret til vinner av ekstern jury
+                                    </span>
+                                    <span class="project-badge grade">
+                                        <i class="fas fa-star"></i>
+                                        Karakter A
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="modal-project-description">
+                            <h3>Om Prosjektet</h3>
+                            <p>
+                                SafeShelter er en fullstack geografisk beredskapsløsning som kombinerer sanntidsposisjonering 
+                                med visualisering av tilfluktsrom, brannstasjoner, sykehus og flomutsatte områder. Systemet 
+                                muliggjør rask identifisering av tryggeste ruter til nærmeste sikkerhetsfasiliteter under 
+                                krisesituasjoner som flom, brann og naturkatastrofer, og representerer innovativ anvendelse 
+                                av geografisk IT i samfunnssikkerhet.
+                            </p>
+                            <div class="modal-actions">
+                            <a href="https://github.com/TriggeredBanana/SafeShelter" target="_blank" class="modal-btn btn-github">
+                                <i class="fab fa-github"></i>
+                                <span>Se Kildekode på GitHub</span>
+                            </a>
+                            <a href="https://safeshelter-iilu.onrender.com/index.html" target="_blank" class="modal-btn btn-demo">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>Åpne Live Demo</span>
+                            </a>
+                        </div>
+                        </div>
+                        
+                        <div class="modal-collaboration">
+                            <div class="collaboration-header">
+                                <div class="collaboration-icon-large">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                                <div>
+                                    <h3>Vårt Samarbeid</h3>
+                                    <p class="collaboration-subtitle">Teamwork makes the dream work</p>
+                                </div>
+                            </div>
+                            <div class="collaboration-grid">
+                                <div class="collaboration-item">
+                                    <i class="fas fa-comments"></i>
+                                    <h4>Kommunikasjon</h4>
+                                    <p>Effektiv dialog og tydelige arbeidsfordeling ga oss et sterkt fundament for suksess.</p>
+                                </div>
+                                <div class="collaboration-item">
+                                    <i class="fas fa-puzzle-piece"></i>
+                                    <h4>Komplementære Ferdigheter</h4>
+                                    <p>Hvert medlem bidro med unik ekspertise innen frontend, backend, databaser og design.</p>
+                                </div>
+                                <div class="collaboration-item">
+                                    <i class="fas fa-trophy"></i>
+                                    <h4>Overgikk Forventninger</h4>
+                                    <p>Løsningen ble kåret til vinner av en ekstern jury og fikk toppkarakter for kvalitet og innovasjon.</p>
+                                </div>
+                                <div class="collaboration-item">
+                                    <i class="fas fa-lightbulb"></i>
+                                    <h4>Kreativ Problemløsning</h4>
+                                    <p>Møtte komplekse utfordringer med innovative tilnærminger og teknisk dyktighet.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="modal-tech-section">
+                            <h3>Teknologier & Verktøy</h3>
+                            <div class="tech-tags-modal">
+                                <span class="tech-tag">HTML</span>
+                                <span class="tech-tag">CSS</span>
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">Leaflet.js</span>
+                                <span class="tech-tag">Node.js</span>
+                                <span class="tech-tag">PostgreSQL</span>
+                                <span class="tech-tag">PostGIS</span>
+                                <span class="tech-tag">OSRM</span>
+                                <span class="tech-tag">Supabase</span>
+                                <span class="tech-tag">API</span>
+                                <span class="tech-tag">QGIS Geospatial Analysis</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Template prosjekt modal for neste prosjekt -->
+        <div id="projectModal" class="project-modal" onclick="closeProjectModal(event)">
+            <div class="modal-content" onclick="event.stopPropagation()">
+                <button class="modal-close" onclick="closeProjectModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+                <div id="modalBody" class="modal-body">
+                    <!-- Innhold vil bli satt inn her -->
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Prosjekter og Samarbeid Seksjon -->
+    <section id="projects" class="projects-section">
+        </div>
+    </section>
+
+    <!-- Våre Interesseområder -->
     <section id="projects" class="projects-section">
         <div class="container">
             <div class="section-header">

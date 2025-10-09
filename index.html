@@ -15,13 +15,16 @@
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <span class="logo-text">Gruppe 8</span>
+                <a href="#" class="logo-link">
+                    <span class="gradient-text">Gruppe 8</span>
+                </a>
             </div>
             <ul class="nav-menu">
-                <li><a href="#home" class="nav-link">Hjem</a></li>
                 <li><a href="#about" class="nav-link">Om Oss</a></li>
+                <li><a href="#video" class="nav-link">Promovideo</a></li>
                 <li><a href="#team" class="nav-link">Teamet</a></li>
-                <li><a href="#projects" class="nav-link">Prosjekter</a></li>
+                <li><a href="#previous-projects" class="nav-link">Tidligere Prosjekter</a></li>
+                <li><a href="#projects" class="nav-link">Interesser</a></li>
                 <li><a href="#contact" class="nav-link">Kontakt</a></li>
             </ul>
             <div class="hamburger">
@@ -36,13 +39,6 @@
     <section id="home" class="hero">
         <div class="container">
             <div class="hero-content">
-                <h1 class="hero-title">
-                    Vi er <span class="gradient-text">Gruppe 8</span>
-                </h1>
-                <p class="hero-description">
-                    Fem dedikerte studenter som søker praksismuligheter. Vi kombinerer teknisk kompetanse 
-                    med kreativ problemløsning for å skape verdifulle løsninger.
-                </p>
                 <div class="hero-buttons">
                     <a href="#team" class="btn btn-primary">
                         Møt Teamet
@@ -59,8 +55,8 @@
     <section id="about" class="about-section">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Om Oss</h2>
-                <p class="section-subtitle">Fem studenter med komplementære ferdigheter</p>
+                <h2 class="section-title">Vi er <span class="gradient-text">Gruppe 8</span></h2>
+                <p class="section-subtitle">Fem dedikerte studenter som søker praksismuligheter for bachelorprosjekt til våren. Vi kombinerer teknisk kompetanse med kreativ problemløsning for å skape verdifulle løsninger.</p>
             </div>
             
             <div class="about-grid">
@@ -69,7 +65,7 @@
                         <i class="fas fa-lightbulb"></i>
                     </div>
                     <h3>Innovative Løsninger</h3>
-                    <p>Vi utvikler kreative og effektive løsninger på komplekse problemer gjennom samarbeid og teknisk ekspertise.</p>
+                    <p>Vi utvikler kreative og effektive løsninger på komplekse problemer gjennom godt samarbeid, agile metoder og teknisk ekspertise.</p>
                 </div>
                 
                 <div class="about-card">
@@ -77,7 +73,7 @@
                         <i class="fas fa-users"></i>
                     </div>
                     <h3>Teamarbeid</h3>
-                    <p>Som en sammensveist gruppe har vi komplementære ferdigheter og kommuniserer godt sammen.</p>
+                    <p>Som en sammensveist gruppe har vi komplementære ferdigheter og kommuniserer godt sammen. Vi jobber alltid effektivt og får ting gjort!</p>
                 </div>
                 
                 <div class="about-card">
@@ -85,7 +81,7 @@
                         <i class="fas fa-graduation-cap"></i>
                     </div>
                     <h3>Lærevillige</h3>
-                    <p>Vi er motiverte for å lære nye teknologier og bidra til meningsfulle prosjekter.</p>
+                    <p>Med høye ambisjoner er vi motiverte for å lære nye teknologier og bidra til meningsfulle prosjekter i deres bedrift.</p>
                 </div>
             </div>
 
@@ -132,160 +128,231 @@
         </div>
     </section>
 
+    <!-- Promo Video Seksjon -->
+    <section id="video" class="promo-video-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Promovideo</h2>
+                <p class="section-subtitle">En kort video som presenterer teamet og hva vi gjør</p>
+            </div>
+            
+            <div class="video-container">
+                <div class="video-wrapper">
+                    <iframe 
+                        src="https://player.vimeo.com/video/1122503455?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;title=0&amp;byline=0&amp;portrait=0&amp;controls=1&amp;fun=0&amp;sidedock=0" 
+                        frameborder="0" 
+                        allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" 
+                        allowfullscreen
+                        referrerpolicy="strict-origin-when-cross-origin" 
+                        title="PromoVideo_v2">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Team Seksjon -->
     <section id="team" class="team-section">
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">Vårt Team</h2>
-                <p class="section-subtitle">Fem studenter med ulike fagbakgrunner</p>
+                <p class="section-subtitle">Bli kjent med oss!</p>
             </div>
             
             <div class="team-grid">
                 <!-- Daniel -->
-                <div class="team-member">
+                <div class="team-member" onclick="openTeamModal(this)" data-member-id="daniel">
                     <div class="member-image">
                         <img src="img/danielmogster.png" alt="Daniel Mogster - Frontend utvikler og UI/UX designer">
-                        <div class="member-overlay">
-                            <div class="member-social">
-                                <a href="https://github.com/TriggeredBanana" target="_blank" class="social-link">
-                                    <img src="icons/github.svg" alt="GitHub">
-                                </a>
-                                <a href="https://www.linkedin.com/in/daniel-m%C3%B8gster-14a643228/" target="_blank" class="social-link">
-                                    <img src="icons/linkedin.svg" alt="LinkedIn">
-                                </a>
-                                <a href="mailto:mogsterdaniel@gmail.com" target="_blank" class="social-link">
-                                    <img src="icons/email.svg" alt="Email">
-                                </a>
-                            </div>
-                        </div>
                     </div>
                     <div class="member-info">
                         <h3 class="member-name">Daniel Møgster</h3>
-                        <p class="member-role">Fullstack Utvikler</p>
-                        <p class="member-description">
-                            Trives godt med front-end og responsivt design, men jobber også med backend-systemer og databaser. 
-                            Har erfaring i prosjektledelse, en del ulike programmeringsspråk, rammeverk og designprinsipper.
-                        </p>
-                        <div class="member-skills">
-                            <span class="skill-tag">React</span>
-                            <span class="skill-tag">JavaScript</span>
-                            <span class="skill-tag">Python</span>
-                            <span class="skill-tag">SQL</span>
-                            <span class="skill-tag">HTML</span>
-                            <span class="skill-tag">CSS</span>
-                            <span class="skill-tag">UI/UX</span>
-                            <span class="skill-tag">++</span>
+                        <p class="member-role">Prosjektleder & Fullstack Utvikler</p>
+                        <button class="view-member-btn-inline">
+                            <span>Se Mer</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                    
+                    <!-- Detaljert innhold for modal -->
+                    <div class="member-detailed-content" style="display: none;">
+                        <div class="modal-member-header">
+                            <div class="modal-member-image-container">
+                                <img src="img/danielmogster.png" alt="Daniel Mogster">
+                            </div>
+                            <div class="modal-member-info">
+                                <h3 class="modal-member-name">Daniel Møgster</h3>
+                                <p class="modal-member-role">Prosjektleder & Fullstack Utvikler</p>
+                                <div class="modal-member-social">
+                                    <a href="https://github.com/TriggeredBanana" target="_blank" class="social-link">
+                                        <img src="icons/github.svg" alt="GitHub">
+                                    </a>
+                                    <a href="https://www.linkedin.com/in/daniel-m%C3%B8gster-14a643228/" target="_blank" class="social-link">
+                                        <img src="icons/linkedin.svg" alt="LinkedIn">
+                                    </a>
+                                    <a href="mailto:mogsterdaniel@gmail.com" target="_blank" class="social-link">
+                                        <img src="icons/email.svg" alt="Email">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-member-description">
+                            <h4>Om Meg</h4>
+                            <p>
+                                Jeg er 24 år gammel og utdannet IKT-fagarbeider. Har stor interesse for data og elektronikk. 
+                                På fritiden jobber jeg ofte med bygging og reparering av både datamaskiner, konsoller og diverse andre enheter.
+                                <br><br>Trives godt med front-end og responsivt design, men jobber også med backend-systemer og databaser. 
+                                Har god erfaring med prosjektledelse, samt en del ulike programmeringsspråk og designprinsipper.
+                            </p>
+                        </div>
+                        <div class="modal-member-skills">
+                            <h4>Ferdigheter</h4>
+                            <div class="member-skills">
+                                <span class="skill-tag">React</span>
+                                <span class="skill-tag">JavaScript</span>
+                                <span class="skill-tag">Python</span>
+                                <span class="skill-tag">SQL</span>
+                                <span class="skill-tag">C#</span>
+                                <span class="skill-tag">PHP</span>
+                                <span class="skill-tag">HTML</span>
+                                <span class="skill-tag">CSS</span>
+                                <span class="skill-tag">UI/UX Design</span>
+                                <span class="skill-tag">Adobe</span>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Teammedlem 2 -->
-                <div class="team-member">
+                <!-- Emil -->
+                <div class="team-member" onclick="openTeamModal(this)" data-member-id="emil">
                     <div class="member-image">
                         <img src="img/emilkaasa.jpg" alt="Emil Stokken Kaasa - IT & Informasjonssystemer-Student">
-                        <div class="member-overlay">
-                            <div class="member-social">
-                                <a href="https://github.com/emkaas" target="_blank" class="social-link">
-                                    <img src="icons/github.svg" alt="GitHub">
-                                </a>
-                                <a href="https://www.linkedin.com/in/emil-kaasa-752604291/" target="_blank" class="social-link">
-                                    <img src="icons/linkedin.svg" alt="LinkedIn">
-                                </a>
-                                <a href="mailto:emkaas93@gmail.com" target="_blank" class="social-link">
-                                    <img src="icons/email.svg" alt="Email">
-                                </a>
-                            </div>
-                        </div>
                     </div>
                     <div class="member-info">
                         <h3 class="member-name">Emil Kaasa</h3>
-                        <p class="member-role">Front-end og idéutvikling</p>
-                        <p class="member-description">
-                            Bred erfaring innen IT og informasjonssystemer, med særlig interesse for front-end, brukervennlighet og utvikling av kreative løsninger. 
-                            Har et spesielt engasjement for idéutvikling, systemarkitektur og det å omsette konsepter til praktiske resultater.
-                        </p>
-                        <div class="member-skills">
-                            <span class="skill-tag">C# / ASP.NET Core</span>
-                            <span class="skill-tag">Python</span>
-                            <span class="skill-tag">SQL</span>
-                            <span class="skill-tag">HTML</span>
-                            <span class="skill-tag">CSS</span>
+                        <p class="member-role">Frontend & Idéutvikling</p>
+                        <button class="view-member-btn-inline">
+                            <span>Se Mer</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                    
+                    <!-- Detaljert innhold for modal -->
+                    <div class="member-detailed-content" style="display: none;">
+                        <div class="modal-member-header">
+                            <div class="modal-member-image-container">
+                                <img src="img/emilkaasa.jpg" alt="Emil Kaasa">
+                            </div>
+                            <div class="modal-member-info">
+                                <h3 class="modal-member-name">Emil Kaasa</h3>
+                                <p class="modal-member-role">Frontend & Idéutvikling</p>
+                                <div class="modal-member-social">
+                                    <a href="https://github.com/emkaas" target="_blank" class="social-link">
+                                        <img src="icons/github.svg" alt="GitHub">
+                                    </a>
+                                    <a href="https://www.linkedin.com/in/emil-kaasa-752604291/" target="_blank" class="social-link">
+                                        <img src="icons/linkedin.svg" alt="LinkedIn">
+                                    </a>
+                                    <a href="mailto:emkaas93@gmail.com" target="_blank" class="social-link">
+                                        <img src="icons/email.svg" alt="Email">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-member-description">
+                            <h4>Om Meg</h4>
+                            <p>
+                                32 år gammel opprinnelig fra Oslo, men for tiden bosatt i det herlige sør, Kristiansand. Jeg interesserer meg for data og teknologi, samtidig som at jeg trives veldig godt med trening, musikkproduksjon og gaming på fritiden.
+                            
+                                <br><br>Bred erfaring innen IT og informasjonssystemer, med særlig interesse for front-end, brukervennlighet og utvikling av kreative løsninger. 
+                                Har et spesielt engasjement for idéutvikling, systemarkitektur og det å omsette konsepter til praktiske resultater.
+                            </p>
+                        </div>
+                        <div class="modal-member-skills">
+                            <h4>Ferdigheter</h4>
+                            <div class="member-skills">
+                                <span class="skill-tag">C#</span>
+                                <span class="skill-tag">Python</span>
+                                <span class="skill-tag">SQL</span>
+                                <span class="skill-tag">HTML</span>
+                                <span class="skill-tag">CSS</span>
+                                <span class="skill-tag">Java</span>
+                                <span class="skill-tag">PHP</span>
+                                <span class="skill-tag">Figma</span>
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Sigurd -->
-                <div class="team-member">
+                <div class="team-member" onclick="openTeamModal(this)" data-member-id="sigurd">
                     <div class="member-image">
                         <img src="img/sigurdbrekke.png" alt="Sigurd Munk Brekke - IT & Informasjonssystemer-Student">
-                        <div class="member-overlay">
-                            <div class="member-social">
-                                <a href="https://github.com/sigurdbrekke" target="_blank" class="social-link">
-                                    <img src="icons/github.svg" alt="GitHub">
-                                </a>
-                                <a href="https://www.linkedin.com/in/sigurd-munk-brekke-059262251" target="_blank" class="social-link">
-                                    <img src="icons/linkedin.svg" alt="LinkedIn">
-                                </a>
-                                <a href="mailto:sigurdbrekke@outlook.com" target="_blank" class="social-link">
-                                    <img src="icons/email.svg" alt="Email">
-                                </a>
-                            </div>
-                        </div>
                     </div>
                     <div class="member-info">
                         <h3 class="member-name">Sigurd Brekke</h3>
-                        <p class="member-role">Utvikler</p>
-                        <p class="member-description">
-                            Svært intressert i backend-systemer, samt å skape gode, intuitive design og applikasjoner som skal kunne forenkle oppgaver. 
-                            Har god erfaring med kommunikasjon, ledelse og prosjektgjennomføring. Er svært intressert i å lære React og Rust som neste steg.
-                        </p>
-                        <div class="member-skills">
-                            <span class="skill-tag">Python</span>
-                            <span class="skill-tag">Java</span>
-                            <span class="skill-tag">C#</span>
-                            <span class="skill-tag">PHP</span>
-                            <span class="skill-tag">SQL</span>
-                            <span class="skill-tag">HTML</span>
-                            <span class="skill-tag">CSS</span>
-                            <span class="skill-tag">JavaScript</span>
+                        <p class="member-role">Backend Utvikler</p>
+                        <button class="view-member-btn-inline">
+                            <span>Se Mer</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                    
+                    <!-- Detaljert innhold for modal -->
+                    <div class="member-detailed-content" style="display: none;">
+                        <div class="modal-member-header">
+                            <div class="modal-member-image-container">
+                                <img src="img/sigurdbrekke.png" alt="Sigurd Brekke">
+                            </div>
+                            <div class="modal-member-info">
+                                <h3 class="modal-member-name">Sigurd Brekke</h3>
+                                <p class="modal-member-role">Backend Utvikler</p>
+                                <div class="modal-member-social">
+                                    <a href="https://github.com/sigurdbrekke" target="_blank" class="social-link">
+                                        <img src="icons/github.svg" alt="GitHub">
+                                    </a>
+                                    <a href="https://www.linkedin.com/in/sigurd-munk-brekke-059262251" target="_blank" class="social-link">
+                                        <img src="icons/linkedin.svg" alt="LinkedIn">
+                                    </a>
+                                    <a href="mailto:sigurdbrekke@outlook.com" target="_blank" class="social-link">
+                                        <img src="icons/email.svg" alt="Email">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-member-description">
+                            <h4>Om Meg</h4>
+                            <p>
+                                Har en eksisterende bachelorgrad i Statsvitenskap ved Universitetet i Agder med fokus på sosiologi og ledelse.
+                                <br></br>
+                                Svært intressert i backend-systemer, samt å skape gode, intuitive design og applikasjoner som skal kunne forenkle oppgaver. 
+                                Har god erfaring med kommunikasjon, ledelse og prosjektgjennomføring. Er svært intressert i å lære React og Rust som neste steg.
+                            </p>
+                        </div>
+                        <div class="modal-member-skills">
+                            <h4>Ferdigheter</h4>
+                            <div class="member-skills">
+                                <span class="skill-tag">Python</span>
+                                <span class="skill-tag">Java</span>
+                                <span class="skill-tag">C#</span>
+                                <span class="skill-tag">PHP</span>
+                                <span class="skill-tag">SQL</span>
+                                <span class="skill-tag">HTML</span>
+                                <span class="skill-tag">CSS</span>
+                                <span class="skill-tag">JavaScript</span>
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Oliver -->
-                <div class="team-member">
+                <div class="team-member" onclick="openTeamModal(this)" data-member-id="oliver">
                     <div class="member-image">
                        <img src="img/OliverLS.jpeg" alt="Oliver Lindberg Skundberg - Utvikler">
-                        <div class="member-overlay">
-                            <div class="member-social">
-                                <a href="https://github.com/oliverhallow"  target="_blank" class="social-link">
-                                    <img src="icons/github.svg" alt="GitHub">
-                                </a>
-                                <a href="https://www.linkedin.com/in/oliver-lindberg-skundberg-b8202928a/"   target="_blank" class="social-link">
-                                    <img src="icons/linkedin.svg"  alt="LinkedIn">
-                                </a>
-                                <a href="mailto:oliverhallow@gmail.com" target="_blank" class="social-link">
-                                    <img src="icons/email.svg" alt="Email">
-                                </a>
-                            </div>
-                        </div>
                     </div>
                     <div class="member-info">
                         <h3 class="member-name">Oliver Lindberg Skundberg</h3>
-                        <p class="member-role">Utvikler</p>
-<<<<<<< Updated upstream
-                        <p class="member-description">
-                            Interresert i alt innenfor utvikling, med spesiell interesse for data analyse.
-                            Har erfaring med kommunikasjon, anvendelse av designprinsipper samt grunnleggende dataanalyse.
-                        </p>
-                        <div class="member-skills">
-                            <span class="skill-tag">Python</span>
-                            <span class="skill-tag">SQL</span>
-                            <span class="skill-tag">HTML</span>
-                            <span class="skill-tag">CSS</span>
-                            <span class="skill-tag">Javascript</span>
-                            <span class="skill-tag">Figma</span>
-=======
+                        <p class="member-role">Utvikler & Dataanalytiker</p>
                         <button class="view-member-btn-inline">
                             <span>Se Mer</span>
                             <i class="fas fa-arrow-right"></i>
@@ -300,7 +367,7 @@
                             </div>
                             <div class="modal-member-info">
                                 <h3 class="modal-member-name">Oliver Lindberg Skundberg</h3>
-                                <p class="modal-member-role">Utvikler</p>
+                                <p class="modal-member-role">Utvikler & Dataanalytiker</p>
                                 <div class="modal-member-social">
                                     <a href="https://github.com/oliverhallow" target="_blank" class="social-link">
                                         <img src="icons/github.svg" alt="GitHub">
@@ -319,7 +386,8 @@
                             <p>
                                 Jeg er 21 år gammel og kommer opprinnelig fra Hokksund. Jeg har alltid vært nysjerrig på både det nye og gamle, og liker å forstå hvordan ting fungerer.  
                                 På fritiden finner du meg ofte i klatrehallen, på cheerleading-trening eller på banen i amerikansk fotball. Når jeg ikke er i full fart liker jeg å være med venner eller spille videospill. 
-                                Innen IT  er jeg interresert i alt som omhandler utvikling, med spesiell interesse for data analyse. Men like
+                                <br></br>
+                                Innen IT er jeg interresert i alt som omhandler utvikling, med spesiell interesse for data analyse.
                                 Jeg har erfaring med kommunikasjon, anvendelse av designprinsipper samt grunnleggende dataanalyse, men ser frem til å lære nye teknologier og videreutvikle min kompetanse.
                             </p>
                         </div>
@@ -331,48 +399,464 @@
                                 <span class="skill-tag">HTML</span>
                                 <span class="skill-tag">CSS</span>
                                 <span class="skill-tag">Javascript</span>
+                                <span class="skill-tag">Data Analyse</span>
                                 <span class="skill-tag">Figma</span>
                             </div>
->>>>>>> Stashed changes
                         </div>
                     </div>
                 </div>
 
                 <!-- Tobias -->
-                <div class="team-member">
+                <div class="team-member" onclick="openTeamModal(this)" data-member-id="tobias">
                     <div class="member-image">
                         <img src="img/Tobias.png" alt="Tobias E. Ek - Dokumentasjonsansvarlig og Frontend utvikler">
                         <div class="placeholder-image">
                             <i class="fas fa-user"></i>
                         </div>
-                        <div class="member-overlay">
-                            <div class="member-social">
-                                <a href="https://github.com/Tobiasee16" target="_blank" class="social-link">
-                                    <img src="icons/github.svg" alt="GitHub">
-                                </a>
-                                 <a href="http://linkedin.com/in/tobias-engedal-ek-20288b28b" target="_blank" class="social-link">
-                                    <img src="icons/linkedin.svg" alt="LinkedIn">
-                                </a>
-                                 <a href="mailto:engedaltobias@icloud.com" target="_blank" class="social-link">
-                                    <img src="icons/email.svg" alt="Email">
-                                </a>
-                            </div>
-                        </div>
                     </div>
                     <div class="member-info">
                         <h3 class="member-name">Tobias Engedal Ek</h3>
                         <p class="member-role">Dokumentasjonsansvarlig</p>
-                        <p class="member-description">
-                            Sørger for at all viktig informasjon i prosjektet er oppdatert og lett å finne. 
-                            Har erfaring med frontend fra tidligere prosjekter.
-                        </p>
-                        <div class="member-skills">
-                            <span class="skill-tag">HTML</span>
-                            <span class="skill-tag">CSS</span>
-                            <span class="skill-tag">Kommunikasjon</span>
-                            <span class="skill-tag">Agile</span>
+                        <button class="view-member-btn-inline">
+                            <span>Se Mer</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                    
+                    <!-- Detaljert innhold for modal -->
+                    <div class="member-detailed-content" style="display: none;">
+                        <div class="modal-member-header">
+                            <div class="modal-member-image-container">
+                                <img src="img/Tobias.png" alt="Tobias Engedal Ek">
+                            </div>
+                            <div class="modal-member-info">
+                                <h3 class="modal-member-name">Tobias Engedal Ek</h3>
+                                <p class="modal-member-role">Dokumentasjonsansvarlig</p>
+                                <div class="modal-member-social">
+                                    <a href="https://github.com/Tobiasee16" target="_blank" class="social-link">
+                                        <img src="icons/github.svg" alt="GitHub">
+                                    </a>
+                                    <a href="http://linkedin.com/in/tobias-engedal-ek-20288b28b" target="_blank" class="social-link">
+                                        <img src="icons/linkedin.svg" alt="LinkedIn">
+                                    </a>
+                                    <a href="mailto:engedaltobias@icloud.com" target="_blank" class="social-link">
+                                        <img src="icons/email.svg" alt="Email">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-member-description">
+                            <h4>Om Meg</h4>
+                            <p>
+                                Jeg er 22 år gammel og studerer It og Informasjonsystemer hos UiA.
+                                På fritiden min liker jeg å drive med styrketrening, gaming og klatring.
+                                Interessen og lærevilligheten min for ny teknologi er stor, og sørger for at jeg har god motivasjon til å legge ned tid og energi til spennende prosjekter.   
+                                <br></br>
+                                En del av ansvaret jeg vil ta på meg er å sørge for at all viktig informasjon i prosjektet er oppdatert og lett å finne. 
+                                Fra tidligere prosjekter så har jeg fått god erfaring med front-end utvikling. 
+                            </p>
+                        </div>
+                        <div class="modal-member-skills">
+                            <h4>Ferdigheter</h4>
+                            <div class="member-skills">
+                                <span class="skill-tag">HTML</span>
+                                <span class="skill-tag">CSS</span>
+                                <span class="skill-tag">Kommunikasjon</span>
+                                <span class="skill-tag">Agile</span>
+                                <span class="skill-tag">Python</span>
+                                <span class="skill-tag">SQL</span>
+                                <span class="skill-tag">Javascript</span>
+                                <span class="skill-tag">Figma</span>
+                            </div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Team Member Modal -->
+        <div id="teamModal" class="team-modal" onclick="closeTeamModal(event)">
+            <div class="modal-content" onclick="event.stopPropagation()">
+                <button class="modal-close" onclick="closeTeamModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+                <div id="teamModalBody" class="modal-body">
+                    <!-- Innhold vil bli satt inn her -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tidligere Prosjekter Seksjon -->
+    <section id="previous-projects" class="previous-projects-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Tidligere Prosjekter</h2>
+                <p class="section-subtitle">En samling av våre tidligere prosjekter og prestasjoner</p>
+            </div>
+            
+            <div class="previous-projects-grid">
+                <!-- SafeShelter Prosjekt -->
+                <div class="previous-project-card" onclick="openProjectModal(this)" data-project-id="safeshelter">
+                    <div class="project-card-header">
+                        <div class="project-logo-wrapper">
+                            <img src="img/SafeShelter_logo.png" alt="SafeShelter Logo" class="project-logo">
+                        </div>
+                        <div class="project-badges">
+                            <span class="project-badge winner">
+                                <i class="fas fa-trophy"></i>
+                                Vinner
+                            </span>
+                            <span class="project-badge grade">
+                                <i class="fas fa-star"></i>
+                                Karakter A
+                            </span>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card-body">
+                        <h3 class="project-title">SafeShelter</h3>
+                        <p class="project-summary">
+                            Fullstack geografisk beredskapsløsning som kombinerer sanntidsposisjonering 
+                            med visualisering av tilfluktsrom og sikkerhetsfasiliteter.
+                        </p>
+                        <button class="view-details-btn">
+                            <span>Se Detaljer</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                    
+                    <!-- Detaljerer for modal når den åpnes -->
+                    <div class="project-detailed-content" style="display: none;">
+                        <div class="modal-project-header">
+                            <div class="modal-logo-banner">
+                                <div class="modal-logo-wrapper">
+                                    <img src="img/SafeShelter_logo.png" alt="SafeShelter Logo" class="modal-project-logo">
+                                </div>
+                                <div class="modal-badges">
+                                    <span class="project-badge winner">
+                                        <i class="fas fa-trophy"></i>
+                                        Kåret til vinner av ekstern jury
+                                    </span>
+                                    <span class="project-badge grade">
+                                        <i class="fas fa-star"></i>
+                                        Karakter A
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="modal-project-description">
+                            <h3>Om Prosjektet</h3>
+                            <p>
+                                SafeShelter er en fullstack geografisk beredskapsløsning som kombinerer sanntidsposisjonering 
+                                med visualisering av tilfluktsrom, brannstasjoner, sykehus og flomutsatte områder. Systemet 
+                                muliggjør rask identifisering av tryggeste ruter til nærmeste sikkerhetsfasiliteter under 
+                                krisesituasjoner som flom, brann og naturkatastrofer, og representerer innovativ anvendelse 
+                                av geografisk IT i samfunnssikkerhet.
+                            </p>
+                            <div class="modal-actions">
+                            <a href="https://github.com/TriggeredBanana/SafeShelter" target="_blank" class="modal-btn btn-github">
+                                <i class="fab fa-github"></i>
+                                <span>Se Kildekode på GitHub</span>
+                            </a>
+                            <a href="https://safeshelter-iilu.onrender.com/index.html" target="_blank" class="modal-btn btn-demo">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>Åpne Live Demo</span>
+                            </a>
+                        </div>
+                        </div>
+                        
+                        <div class="modal-collaboration">
+                            <div class="collaboration-header">
+                                <div class="collaboration-icon-large">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                                <div>
+                                    <h3>Vårt Samarbeid</h3>
+                                    <p class="collaboration-subtitle">Teamwork makes the dream work</p>
+                                </div>
+                            </div>
+                            <div class="collaboration-grid">
+                                <div class="collaboration-item">
+                                    <i class="fas fa-comments"></i>
+                                    <h4>Kommunikasjon</h4>
+                                    <p>Effektiv dialog og tydelige arbeidsfordeling ga oss et sterkt fundament for suksess.</p>
+                                </div>
+                                <div class="collaboration-item">
+                                    <i class="fas fa-puzzle-piece"></i>
+                                    <h4>Komplementære Ferdigheter</h4>
+                                    <p>Hvert medlem bidro med unik ekspertise innen frontend, backend, databaser og design.</p>
+                                </div>
+                                <div class="collaboration-item">
+                                    <i class="fas fa-trophy"></i>
+                                    <h4>Overgikk Forventninger</h4>
+                                    <p>Løsningen ble kåret til vinner av en ekstern jury og fikk toppkarakter for kvalitet og innovasjon.</p>
+                                </div>
+                                <div class="collaboration-item">
+                                    <i class="fas fa-lightbulb"></i>
+                                    <h4>Kreativ Problemløsning</h4>
+                                    <p>Møtte komplekse utfordringer med innovative tilnærminger og teknisk dyktighet.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="modal-tech-section">
+                            <h3>Teknologier & Verktøy</h3>
+                            <div class="tech-tags-modal">
+                                <span class="tech-tag">HTML</span>
+                                <span class="tech-tag">CSS</span>
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">Leaflet.js</span>
+                                <span class="tech-tag">Node.js</span>
+                                <span class="tech-tag">PostgreSQL</span>
+                                <span class="tech-tag">PostGIS</span>
+                                <span class="tech-tag">OSRM</span>
+                                <span class="tech-tag">Supabase</span>
+                                <span class="tech-tag">API</span>
+                                <span class="tech-tag">QGIS Geospatial Analysis</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kartverket Prosjekt -->
+                <div class="previous-project-card" onclick="openProjectModal(this)" data-project-id="kartverket">
+                    <div class="project-card-header">
+                        <div class="project-logo-wrapper kartverket-logo">
+                            <i class="fas fa-map-marked-alt"></i>
+                        </div>
+                        <div class="project-badges">
+                            <span class="project-badge winner">
+                                <i class="fas fa-trophy"></i>
+                                Vinner
+                            </span>
+                            <span class="project-badge academic">
+                                <i class="fas fa-graduation-cap"></i>
+                                Akademisk
+                            </span>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card-body">
+                        <h3 class="project-title">Kartverket</h3>
+                        <p class="project-summary">
+                            Innovativ brukerrapporteringsløsning for Kartverket med GPS-sporing i sanntid, 
+                            som gjør det enklere å melde inn kartfeil direkte fra felt.
+                        </p>
+                        <button class="view-details-btn">
+                            <span>Se Detaljer</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                    
+                    <!-- Detaljerer for modal når den åpnes -->
+                    <div class="project-detailed-content" style="display: none;">
+                        <div class="modal-project-header">
+                            <div class="modal-logo-banner kartverket-banner">
+                                <div class="modal-logo-wrapper kartverket-logo">
+                                    <i class="fas fa-map-marked-alt"></i>
+                                </div>
+                                <div class="modal-badges">
+                                    <span class="project-badge winner">
+                                        <i class="fas fa-trophy"></i>
+                                        Kåret til vinner av ekstern jury (Kartverket)
+                                    </span>
+                                    <span class="project-badge academic">
+                                        <i class="fas fa-graduation-cap"></i>
+                                        Akademisk Prosjekt
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="modal-project-description">
+                            <h3>Om Prosjektet</h3>
+                            <p>
+                                Applikasjonen "Gruppe10KVprototype" er basert på et prosjekt fra Kartverket og har som mål å gjøre brukerrapportering enklere og håndtere ulik geodata. Systemet gir et brukervennlig grensesnitt for å melde inn feil sammen med geolokasjonsdata, og sikrer effektiv håndtering av innmeldinger for saksbehandlere. Gruppens system introduserer en ny og kreativ løsning der innmeldere kan benytte seg av sporing via GPS, som gjør det enklere å melde inn feil mens man er på tur og oppdager feil i kartet.
+                            </p>
+                            
+                            <div class="modal-actions">
+                                <a href="https://github.com/Kristiann96/Gruppe10KV" target="_blank" class="modal-btn btn-github">
+                                    <i class="fab fa-github"></i>
+                                    <span>Se Kildekode på GitHub</span>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="modal-collaboration">
+                            <div class="collaboration-header">
+                                <div class="collaboration-icon-large">
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <div>
+                                    <h3>Hovedfunksjoner</h3>
+                                    <p class="collaboration-subtitle">Innovativt verktøy for effektiv kartfeilhåndtering</p>
+                                </div>
+                            </div>
+                            <div class="collaboration-grid">
+                                <div class="collaboration-item">
+                                    <i class="fas fa-map-pin"></i>
+                                    <h4>Motta innmeldinger</h4>
+                                    <p>Brukere kan melde inn feil på geografiske lokasjoner, inkludert geodata (GeoJSON-format), samt bruke sporing via GPS for å melde inn feil i sanntid.</p>
+                                </div>
+                                <div class="collaboration-item">
+                                    <i class="fas fa-tasks"></i>
+                                    <h4>Administratorgjennomgang</h4>
+                                    <p>Saksbehandlere kan effektivt gjennomgå, vurdere, administrere og delegere innmeldinger.</p>
+                                </div>
+                                <div class="collaboration-item">
+                                    <i class="fas fa-database"></i>
+                                    <h4>Datakompilering</h4>
+                                    <p>Systemet gir en detaljert oversikt over forskjellige geodata og brukerinnsendte data.</p>
+                                </div>
+                                <div class="collaboration-item">
+                                    <i class="fas fa-user-shield"></i>
+                                    <h4>Autentisering og brukeradministrasjon</h4>
+                                    <p>Inkluderer et autentiseringssystem for ulike brukertyper, som gjester og registrerte brukere.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="modal-tech-section">
+                            <h3>Teknologier & Verktøy</h3>
+                            <div class="tech-tags-modal">
+                                <span class="tech-tag">HTML</span>
+                                <span class="tech-tag">CSS</span>
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">C#</span>
+                                <span class="tech-tag">Mermaid</span>
+                                <span class="tech-tag">Docker</span>
+                                <span class="tech-tag">MySQL/MariaDB</span>
+                                <span class="tech-tag">Dapper ORM</span>
+                                <span class="tech-tag">ASP.NET</span>
+                                <span class="tech-tag">Leaflet.js</span>
+                                <span class="tech-tag">API</span>
+                                <span class="tech-tag">Entity Framework & Identity</span>
+                                <span class="tech-tag">PostgreSQL</span>
+                                <span class="tech-tag">PostGIS</span>
+                                <span class="tech-tag">GeoJSON</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Multi Model AI Generator Prosjekt -->
+                <div class="previous-project-card" onclick="openProjectModal(this)" data-project-id="ai-generator">
+                    <div class="project-card-header">
+                        <div class="project-logo-wrapper ai-logo">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <div class="project-badges">
+                            <span class="project-badge hobby">
+                                <i class="fas fa-heart"></i>
+                                Hobbyprosjekt
+                            </span>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card-body">
+                        <h3 class="project-title">Multi Model AI Generator</h3>
+                        <p class="project-summary">
+                            Lokal AI-applikasjon med flere state-of-the-art modeller for bilde- og videogenerering. 
+                            Støtter alle GPU-typer med et intuitivt webgrensesnitt.
+                        </p>
+                        <button class="view-details-btn">
+                            <span>Se Detaljer</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                    
+                    <!-- Detaljerer for modal når den åpnes -->
+                    <div class="project-detailed-content" style="display: none;">
+                        <div class="modal-project-header">
+                            <div class="modal-logo-banner ai-banner">
+                                <div class="modal-logo-wrapper ai-logo">
+                                    <i class="fas fa-brain"></i>
+                                </div>
+                                <div class="modal-badges">
+                                    <span class="project-badge hobby">
+                                        <i class="fas fa-heart"></i>
+                                        Personlig Hobbyprosjekt
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="modal-project-description">
+                            <h3>Om Prosjektet</h3>
+                            <p>
+                                Multi Model AI Generator er en lokal AI-applikasjon som gjør avansert bilde- og videogenerering tilgjengelig for alle. Applikasjonen støtter flere state-of-the-art AI-modeller og kan kjøre på alle typer maskinvare - enten du har NVIDIA GPU, AMD GPU eller bare CPU. Med et brukervennlig webgrensesnitt kan man enkelt eksperimentere med forskjellige modeller og innstillinger for å skape unikt innhold.
+                            </p>
+                            
+                            <div class="modal-actions">
+                                <a href="https://github.com/TriggeredBanana/Multi-Model-AI-Generator" target="_blank" class="modal-btn btn-github">
+                                    <i class="fab fa-github"></i>
+                                    <span>Se Kildekode på GitHub</span>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="modal-collaboration">
+                            <div class="collaboration-header">
+                                <div class="collaboration-icon-large">
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <div>
+                                    <h3>Hovedfunksjoner</h3>
+                                    <p class="collaboration-subtitle">Avansert AI-teknologi gjort tilgjengelig</p>
+                                </div>
+                            </div>
+                            <div class="collaboration-grid">
+                                <div class="collaboration-item">
+                                    <i class="fas fa-layer-group"></i>
+                                    <h4>Multi-modell støtte</h4>
+                                    <p>Integrasjon med flere ledende AI-modeller for maksimal fleksibilitet</p>
+                                </div>
+                                <div class="collaboration-item">
+                                    <i class="fas fa-microchip"></i>
+                                    <h4>Universell GPU-støtte</h4>
+                                    <p>Fungerer med NVIDIA, AMD og CPU - ingen spesialhardware nødvendig</p>
+                                </div>
+                                <div class="collaboration-item">
+                                    <i class="fas fa-lock"></i>
+                                    <h4>Lokal kjøring</h4>
+                                    <p>Full kontroll over generert data - alt kjøres på din egen maskin</p>
+                                </div>
+                                <div class="collaboration-item">
+                                    <i class="fas fa-image"></i>
+                                    <h4>Bilde & Video</h4>
+                                    <p>Generer både statiske bilder og dynamiske videoer</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="modal-tech-section">
+                            <h3>Teknologier & Verktøy</h3>
+                            <div class="tech-tags-modal">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Batchfile</span>
+                                <span class="tech-tag">PyTorch</span>
+                                <span class="tech-tag">Stable Diffusion</span>
+                                <span class="tech-tag">AI/KI</span>
+                                <span class="tech-tag">AI Models & Checkpoints</span>
+                                <span class="tech-tag">LoRA</span>
+                                <span class="tech-tag">AI Image Model - LoRA Training</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Template prosjekt modal for neste prosjekt -->
+        <div id="projectModal" class="project-modal" onclick="closeProjectModal(event)">
+            <div class="modal-content" onclick="event.stopPropagation()">
+                <button class="modal-close" onclick="closeProjectModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+                <div id="modalBody" class="modal-body">
+                    <!-- Innhold vil bli satt inn her -->
                 </div>
             </div>
         </div>
@@ -380,10 +864,15 @@
 
     <!-- Prosjekter og Samarbeid Seksjon -->
     <section id="projects" class="projects-section">
+        </div>
+    </section>
+
+    <!-- Våre Interesseområder -->
+    <section id="projects" class="projects-section">
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">Våre Interesseområder</h2>
-                <p class="section-subtitle">Prosjekttyper vi ønsker å arbeide med</p>
+                <p class="section-subtitle">Noen eksempler på prosjekttyper vi ønsker å arbeide med</p>
             </div>
             
             <div class="projects-grid">
@@ -481,7 +970,7 @@
             <div class="ideal-companies">
                 <h3 class="ideal-title">Bedrifter Vi Ønsker å Jobbe Med</h3>
                 <p class="ideal-description">
-                    Vi søker praksisplasser hos bedrifter som kan gi oss verdifull erfaring og mulighet til å bidra.
+                    Vi søker praksisplasser hos bedrifter som kan gi oss verdifull erfaring og mulighet til å bidra. Kjenner du deg ikke igjen i noen av disse kategoriene? <br><br>Ta gjerne kontakt uansett så finner vi ut av noe!
                 </p>
                 <div class="company-types">
                     <div class="company-type">
@@ -600,10 +1089,11 @@
                     <p>Fem studenter på jakt etter et spennende bachelorprosjekt.</p>
                 </div>
                 <div class="footer-links">
-                    <a href="#home">Hjem</a>
                     <a href="#about">Om Oss</a>
+                    <a href="#video">Promovideo</a>
                     <a href="#team">Teamet</a>
-                    <a href="#projects">Prosjekter</a>
+                    <a href="#previous-projects">Tidligere Prosjekter</a>
+                    <a href="#projects">Interesser</a>
                     <a href="#contact">Kontakt</a>
                 </div>
             </div>
@@ -613,7 +1103,11 @@
         </div>
     </footer>
 
-    <script src="email-config.js"></script>
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTop" class="scroll-to-top" aria-label="Scroll til toppen">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
     <script src="script.js"></script>
 </body>
 </html>

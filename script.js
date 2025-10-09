@@ -4,28 +4,59 @@ const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.nav-menu');
 const navLinks = document.querySelectorAll('.nav-link');
 const contactForm = document.getElementById('contactForm');
+const scrollToTopBtn = document.getElementById('scrollToTop');
 
 // Initialiser applikasjonen
 document.addEventListener('DOMContentLoaded', function() {
     console.log('Initialiserer applikasjon...');
     
-    // Vent litt for å være sikker på at email-config.js er lastet
-    setTimeout(function() {
-        // Initialiser EmailJS med config (ny API)
-        if (window.EMAIL_CONFIG && window.EMAIL_CONFIG.publicKey) {
-            console.log('Initialiserer EmailJS med public key:', window.EMAIL_CONFIG.publicKey);
-            emailjs.init({
-                publicKey: window.EMAIL_CONFIG.publicKey
-            });
-        } else {
-            console.log('ERROR: EMAIL_CONFIG ikke tilgjengelig!');
-        }
-        
+    // Last email-konfigurasjonen fra API
+    loadEmailConfig().then(() => {
         initializeNavigation();
         initializeScrollEffects();
         initializeContactForm();
-    }, 100);
+        initializeScrollToTop();
+    }).catch(error => {
+        console.error('Feil ved lasting av email-konfigurasjon:', error);
+        // Initialiser resten av appen selv om email ikke fungerer
+        initializeNavigation();
+        initializeScrollEffects();
+        initializeContactForm();
+        initializeScrollToTop();
+    });
 });
+
+// Last EmailJS-konfigurasjonen
+async function loadEmailConfig() {
+    try {
+        const response = await fetch('/api/config');
+        
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        
+        const config = await response.json();
+        
+        // Lagre konfigurasjonen globalt
+        window.EMAIL_CONFIG = config;
+        
+        // Initialiser EmailJS
+        if (typeof emailjs !== 'undefined') {
+            console.log('Initialiserer EmailJS med config fra API');
+            emailjs.init({
+                publicKey: config.publicKey
+            });
+        } else {
+            console.warn('EmailJS library ikke lastet ennå');
+        }
+        
+        return config;
+        
+    } catch (error) {
+        console.error('Kunne ikke laste email-konfigurasjon:', error);
+        throw error;
+    }
+}
 
 // Navigasjonsfunksjonalitet
 function initializeNavigation() {
@@ -77,7 +108,45 @@ function initializeScrollEffects() {
     window.addEventListener('scroll', function() {
         // Oppdater aktiv navigasjonslenke
         updateActiveNavLink();
+        
+        // Navbar scroll animation
+        updateNavbarOnScroll();
+        
+        // Scroll to top button visibility
+        updateScrollToTopButton();
     });
+}
+
+// Oppdater navbar basert på scroll posisjon
+function updateNavbarOnScroll() {
+    if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+    } else {
+        navbar.classList.remove('scrolled');
+    }
+}
+
+// Oppdater scroll to top button synlighet
+function updateScrollToTopButton() {
+    if (scrollToTopBtn) {
+        if (window.scrollY > 300) {
+            scrollToTopBtn.classList.add('visible');
+        } else {
+            scrollToTopBtn.classList.remove('visible');
+        }
+    }
+}
+
+// Initialiser scroll to top funksjonalitet
+function initializeScrollToTop() {
+    if (scrollToTopBtn) {
+        scrollToTopBtn.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    }
 }
 
 // Oppdater aktiv navigasjonslenke basert på rulleposisjon
@@ -419,3 +488,93 @@ ta gjerne kontakt!
 Mvh,
 Gruppe 8 💻
 `);
+
+// Åpne prosjekt modal
+function openProjectModal(card) {
+    const modal = document.getElementById('projectModal');
+    const modalBody = document.getElementById('modalBody');
+    const detailedContent = card.querySelector('.project-detailed-content');
+    
+    if (detailedContent && modal && modalBody) {
+        // Klon innholdet
+        modalBody.innerHTML = detailedContent.innerHTML;
+        
+        // Vis modal med animasjon
+        modal.style.display = 'flex';
+        document.body.style.overflow = 'hidden';
+        
+        // Utløs animasjon
+        setTimeout(() => {
+            modal.classList.add('active');
+        }, 10);
+    }
+}
+
+// Lukk prosjekt modal
+function closeProjectModal(event) {
+    const modal = document.getElementById('projectModal');
+    
+    if (modal) {
+        modal.classList.remove('active');
+        
+        setTimeout(() => {
+            modal.style.display = 'none';
+            document.body.style.overflow = '';
+            
+            // Tøm innhold
+            const modalBody = document.getElementById('modalBody');
+            if (modalBody) {
+                modalBody.innerHTML = '';
+            }
+        }, 300);
+    }
+}
+
+// Lukk modal med Escape-tast
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+        closeProjectModal();
+        closeTeamModal();
+    }
+});
+
+// Åpne team medlem modal
+function openTeamModal(card) {
+    const modal = document.getElementById('teamModal');
+    const modalBody = document.getElementById('teamModalBody');
+    const detailedContent = card.querySelector('.member-detailed-content');
+    
+    if (detailedContent && modal && modalBody) {
+        // Klon innholdet
+        modalBody.innerHTML = detailedContent.innerHTML;
+        
+        // Vis modal med animasjon
+        modal.style.display = 'flex';
+        document.body.style.overflow = 'hidden';
+        
+        // Utløs animasjon
+        setTimeout(() => {
+            modal.classList.add('active');
+        }, 10);
+    }
+}
+
+// Lukk team medlem modal
+function closeTeamModal(event) {
+    const modal = document.getElementById('teamModal');
+    
+    if (modal) {
+        modal.classList.remove('active');
+        
+        setTimeout(() => {
+            modal.style.display = 'none';
+            document.body.style.overflow = '';
+            
+            // Tøm innhold
+            const modalBody = document.getElementById('teamModalBody');
+            if (modalBody) {
+                modalBody.innerHTML = '';
+            }
+        }, 300);
+    }
+}

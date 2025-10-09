@@ -4,6 +4,7 @@ const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.nav-menu');
 const navLinks = document.querySelectorAll('.nav-link');
 const contactForm = document.getElementById('contactForm');
+const scrollToTopBtn = document.getElementById('scrollToTop');
 
 // Initialiser applikasjonen
 document.addEventListener('DOMContentLoaded', function() {
@@ -14,12 +15,14 @@ document.addEventListener('DOMContentLoaded', function() {
         initializeNavigation();
         initializeScrollEffects();
         initializeContactForm();
+        initializeScrollToTop();
     }).catch(error => {
         console.error('Feil ved lasting av email-konfigurasjon:', error);
         // Initialiser resten av appen selv om email ikke fungerer
         initializeNavigation();
         initializeScrollEffects();
         initializeContactForm();
+        initializeScrollToTop();
     });
 });
 
@@ -105,7 +108,45 @@ function initializeScrollEffects() {
     window.addEventListener('scroll', function() {
         // Oppdater aktiv navigasjonslenke
         updateActiveNavLink();
+        
+        // Navbar scroll animation
+        updateNavbarOnScroll();
+        
+        // Scroll to top button visibility
+        updateScrollToTopButton();
     });
+}
+
+// Oppdater navbar basert på scroll posisjon
+function updateNavbarOnScroll() {
+    if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+    } else {
+        navbar.classList.remove('scrolled');
+    }
+}
+
+// Oppdater scroll to top button synlighet
+function updateScrollToTopButton() {
+    if (scrollToTopBtn) {
+        if (window.scrollY > 300) {
+            scrollToTopBtn.classList.add('visible');
+        } else {
+            scrollToTopBtn.classList.remove('visible');
+        }
+    }
+}
+
+// Initialiser scroll to top funksjonalitet
+function initializeScrollToTop() {
+    if (scrollToTopBtn) {
+        scrollToTopBtn.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    }
 }
 
 // Oppdater aktiv navigasjonslenke basert på rulleposisjon
@@ -493,6 +534,47 @@ function closeProjectModal(event) {
 document.addEventListener('keydown', function(e) {
     if (e.key === 'Escape') {
         closeProjectModal();
+        closeTeamModal();
     }
 });
 
+// Åpne team medlem modal
+function openTeamModal(card) {
+    const modal = document.getElementById('teamModal');
+    const modalBody = document.getElementById('teamModalBody');
+    const detailedContent = card.querySelector('.member-detailed-content');
+    
+    if (detailedContent && modal && modalBody) {
+        // Klon innholdet
+        modalBody.innerHTML = detailedContent.innerHTML;
+        
+        // Vis modal med animasjon
+        modal.style.display = 'flex';
+        document.body.style.overflow = 'hidden';
+        
+        // Utløs animasjon
+        setTimeout(() => {
+            modal.classList.add('active');
+        }, 10);
+    }
+}
+
+// Lukk team medlem modal
+function closeTeamModal(event) {
+    const modal = document.getElementById('teamModal');
+    
+    if (modal) {
+        modal.classList.remove('active');
+        
+        setTimeout(() => {
+            modal.style.display = 'none';
+            document.body.style.overflow = '';
+            
+            // Tøm innhold
+            const modalBody = document.getElementById('teamModalBody');
+            if (modalBody) {
+                modalBody.innerHTML = '';
+            }
+        }, 300);
+    }
+}

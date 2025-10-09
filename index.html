@@ -162,198 +162,315 @@
             
             <div class="team-grid">
                 <!-- Daniel -->
-                <div class="team-member">
+                <div class="team-member" onclick="openTeamModal(this)" data-member-id="daniel">
                     <div class="member-image">
                         <img src="img/danielmogster.png" alt="Daniel Mogster - Frontend utvikler og UI/UX designer">
-                        <div class="member-overlay">
-                            <div class="member-social">
-                                <a href="https://github.com/TriggeredBanana" target="_blank" class="social-link">
-                                    <img src="icons/github.svg" alt="GitHub">
-                                </a>
-                                <a href="https://www.linkedin.com/in/daniel-m%C3%B8gster-14a643228/" target="_blank" class="social-link">
-                                    <img src="icons/linkedin.svg" alt="LinkedIn">
-                                </a>
-                                <a href="mailto:mogsterdaniel@gmail.com" target="_blank" class="social-link">
-                                    <img src="icons/email.svg" alt="Email">
-                                </a>
-                            </div>
-                        </div>
                     </div>
                     <div class="member-info">
                         <h3 class="member-name">Daniel Møgster</h3>
                         <p class="member-role">Fullstack Utvikler</p>
-                        <p class="member-description">
-                            Jeg er 24 år gammel og utdannet IKT-fagarbeider. Har stor interesse for data og elektronikk. 
-                            På fritiden jobber jeg ofte med bygging og reparering av både datamaskiner, konsoller og diverse andre enheter.
-                            <br><br>Trives godt med front-end og responsivt design, men jobber også med backend-systemer og databaser. 
-                            Har god erfaring med prosjektledelse, samt en del ulike programmeringsspråk og designprinsipper.
-                        </p>
-                        <div class="member-skills">
-                            <span class="skill-tag">React</span>
-                            <span class="skill-tag">JavaScript</span>
-                            <span class="skill-tag">Python</span>
-                            <span class="skill-tag">SQL</span>
-                            <span class="skill-tag">C#</span>
-                            <span class="skill-tag">PHP</span>
-                            <span class="skill-tag">HTML</span>
-                            <span class="skill-tag">CSS</span>
-                            <span class="skill-tag">UI/UX Design</span>
-                            <span class="skill-tag">Adobe</span>
+                        <button class="view-member-btn-inline">
+                            <span>Se Mer</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                    
+                    <!-- Detaljert innhold for modal -->
+                    <div class="member-detailed-content" style="display: none;">
+                        <div class="modal-member-header">
+                            <div class="modal-member-image-container">
+                                <img src="img/danielmogster.png" alt="Daniel Mogster">
+                            </div>
+                            <div class="modal-member-info">
+                                <h3 class="modal-member-name">Daniel Møgster</h3>
+                                <p class="modal-member-role">Fullstack Utvikler</p>
+                                <div class="modal-member-social">
+                                    <a href="https://github.com/TriggeredBanana" target="_blank" class="social-link">
+                                        <img src="icons/github.svg" alt="GitHub">
+                                    </a>
+                                    <a href="https://www.linkedin.com/in/daniel-m%C3%B8gster-14a643228/" target="_blank" class="social-link">
+                                        <img src="icons/linkedin.svg" alt="LinkedIn">
+                                    </a>
+                                    <a href="mailto:mogsterdaniel@gmail.com" target="_blank" class="social-link">
+                                        <img src="icons/email.svg" alt="Email">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-member-description">
+                            <h4>Om Meg</h4>
+                            <p>
+                                Jeg er 24 år gammel og utdannet IKT-fagarbeider. Har stor interesse for data og elektronikk. 
+                                På fritiden jobber jeg ofte med bygging og reparering av både datamaskiner, konsoller og diverse andre enheter.
+                                <br><br>Trives godt med front-end og responsivt design, men jobber også med backend-systemer og databaser. 
+                                Har god erfaring med prosjektledelse, samt en del ulike programmeringsspråk og designprinsipper.
+                            </p>
+                        </div>
+                        <div class="modal-member-skills">
+                            <h4>Ferdigheter</h4>
+                            <div class="member-skills">
+                                <span class="skill-tag">React</span>
+                                <span class="skill-tag">JavaScript</span>
+                                <span class="skill-tag">Python</span>
+                                <span class="skill-tag">SQL</span>
+                                <span class="skill-tag">C#</span>
+                                <span class="skill-tag">PHP</span>
+                                <span class="skill-tag">HTML</span>
+                                <span class="skill-tag">CSS</span>
+                                <span class="skill-tag">UI/UX Design</span>
+                                <span class="skill-tag">Adobe</span>
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Emil -->
-                <div class="team-member">
+                <div class="team-member" onclick="openTeamModal(this)" data-member-id="emil">
                     <div class="member-image">
                         <img src="img/emilkaasa.jpg" alt="Emil Stokken Kaasa - IT & Informasjonssystemer-Student">
-                        <div class="member-overlay">
-                            <div class="member-social">
-                                <a href="https://github.com/emkaas" target="_blank" class="social-link">
-                                    <img src="icons/github.svg" alt="GitHub">
-                                </a>
-                                <a href="https://www.linkedin.com/in/emil-kaasa-752604291/" target="_blank" class="social-link">
-                                    <img src="icons/linkedin.svg" alt="LinkedIn">
-                                </a>
-                                <a href="mailto:emkaas93@gmail.com" target="_blank" class="social-link">
-                                    <img src="icons/email.svg" alt="Email">
-                                </a>
-                            </div>
-                        </div>
                     </div>
                     <div class="member-info">
                         <h3 class="member-name">Emil Kaasa</h3>
                         <p class="member-role">Utvikler</p>
-                        <p class="member-description">
-                            Bred erfaring innen IT og informasjonssystemer, med særlig interesse for front-end, brukervennlighet og utvikling av kreative løsninger. 
-                            Har et spesielt engasjement for idéutvikling, systemarkitektur og det å omsette konsepter til praktiske resultater.
-                        </p>
-                        <div class="member-skills">
-                            <span class="skill-tag">C# / ASP.NET Core</span>
-                            <span class="skill-tag">Python</span>
-                            <span class="skill-tag">SQL</span>
-                            <span class="skill-tag">HTML</span>
-                            <span class="skill-tag">CSS</span>
+                        <button class="view-member-btn-inline">
+                            <span>Se Mer</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                    
+                    <!-- Detaljert innhold for modal -->
+                    <div class="member-detailed-content" style="display: none;">
+                        <div class="modal-member-header">
+                            <div class="modal-member-image-container">
+                                <img src="img/emilkaasa.jpg" alt="Emil Kaasa">
+                            </div>
+                            <div class="modal-member-info">
+                                <h3 class="modal-member-name">Emil Kaasa</h3>
+                                <p class="modal-member-role">Utvikler</p>
+                                <div class="modal-member-social">
+                                    <a href="https://github.com/emkaas" target="_blank" class="social-link">
+                                        <img src="icons/github.svg" alt="GitHub">
+                                    </a>
+                                    <a href="https://www.linkedin.com/in/emil-kaasa-752604291/" target="_blank" class="social-link">
+                                        <img src="icons/linkedin.svg" alt="LinkedIn">
+                                    </a>
+                                    <a href="mailto:emkaas93@gmail.com" target="_blank" class="social-link">
+                                        <img src="icons/email.svg" alt="Email">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-member-description">
+                            <h4>Om Meg</h4>
+                            <p>
+                                Bred erfaring innen IT og informasjonssystemer, med særlig interesse for front-end, brukervennlighet og utvikling av kreative løsninger. 
+                                Har et spesielt engasjement for idéutvikling, systemarkitektur og det å omsette konsepter til praktiske resultater.
+                            </p>
+                        </div>
+                        <div class="modal-member-skills">
+                            <h4>Ferdigheter</h4>
+                            <div class="member-skills">
+                                <span class="skill-tag">C# / ASP.NET Core</span>
+                                <span class="skill-tag">Python</span>
+                                <span class="skill-tag">SQL</span>
+                                <span class="skill-tag">HTML</span>
+                                <span class="skill-tag">CSS</span>
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Sigurd -->
-                <div class="team-member">
+                <div class="team-member" onclick="openTeamModal(this)" data-member-id="sigurd">
                     <div class="member-image">
                         <img src="img/sigurdbrekke.png" alt="Sigurd Munk Brekke - IT & Informasjonssystemer-Student">
-                        <div class="member-overlay">
-                            <div class="member-social">
-                                <a href="https://github.com/sigurdbrekke" target="_blank" class="social-link">
-                                    <img src="icons/github.svg" alt="GitHub">
-                                </a>
-                                <a href="https://www.linkedin.com/in/sigurd-munk-brekke-059262251" target="_blank" class="social-link">
-                                    <img src="icons/linkedin.svg" alt="LinkedIn">
-                                </a>
-                                <a href="mailto:sigurdbrekke@outlook.com" target="_blank" class="social-link">
-                                    <img src="icons/email.svg" alt="Email">
-                                </a>
-                            </div>
-                        </div>
                     </div>
                     <div class="member-info">
                         <h3 class="member-name">Sigurd Brekke</h3>
                         <p class="member-role">Utvikler</p>
-                        <p class="member-description">
-                            Svært intressert i backend-systemer, samt å skape gode, intuitive design og applikasjoner som skal kunne forenkle oppgaver. 
-                            Har god erfaring med kommunikasjon, ledelse og prosjektgjennomføring. Er svært intressert i å lære React og Rust som neste steg.
-                        </p>
-                        <div class="member-skills">
-                            <span class="skill-tag">Python</span>
-                            <span class="skill-tag">Java</span>
-                            <span class="skill-tag">C#</span>
-                            <span class="skill-tag">PHP</span>
-                            <span class="skill-tag">SQL</span>
-                            <span class="skill-tag">HTML</span>
-                            <span class="skill-tag">CSS</span>
-                            <span class="skill-tag">JavaScript</span>
+                        <button class="view-member-btn-inline">
+                            <span>Se Mer</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                    
+                    <!-- Detaljert innhold for modal -->
+                    <div class="member-detailed-content" style="display: none;">
+                        <div class="modal-member-header">
+                            <div class="modal-member-image-container">
+                                <img src="img/sigurdbrekke.png" alt="Sigurd Brekke">
+                            </div>
+                            <div class="modal-member-info">
+                                <h3 class="modal-member-name">Sigurd Brekke</h3>
+                                <p class="modal-member-role">Utvikler</p>
+                                <div class="modal-member-social">
+                                    <a href="https://github.com/sigurdbrekke" target="_blank" class="social-link">
+                                        <img src="icons/github.svg" alt="GitHub">
+                                    </a>
+                                    <a href="https://www.linkedin.com/in/sigurd-munk-brekke-059262251" target="_blank" class="social-link">
+                                        <img src="icons/linkedin.svg" alt="LinkedIn">
+                                    </a>
+                                    <a href="mailto:sigurdbrekke@outlook.com" target="_blank" class="social-link">
+                                        <img src="icons/email.svg" alt="Email">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-member-description">
+                            <h4>Om Meg</h4>
+                            <p>
+                                Svært intressert i backend-systemer, samt å skape gode, intuitive design og applikasjoner som skal kunne forenkle oppgaver. 
+                                Har god erfaring med kommunikasjon, ledelse og prosjektgjennomføring. Er svært intressert i å lære React og Rust som neste steg.
+                            </p>
+                        </div>
+                        <div class="modal-member-skills">
+                            <h4>Ferdigheter</h4>
+                            <div class="member-skills">
+                                <span class="skill-tag">Python</span>
+                                <span class="skill-tag">Java</span>
+                                <span class="skill-tag">C#</span>
+                                <span class="skill-tag">PHP</span>
+                                <span class="skill-tag">SQL</span>
+                                <span class="skill-tag">HTML</span>
+                                <span class="skill-tag">CSS</span>
+                                <span class="skill-tag">JavaScript</span>
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Oliver -->
-                <div class="team-member">
+                <div class="team-member" onclick="openTeamModal(this)" data-member-id="oliver">
                     <div class="member-image">
                        <img src="img/OliverLS.jpeg" alt="Oliver Lindberg Skundberg - Utvikler">
-                        <div class="member-overlay">
-                            <div class="member-social">
-                                <a href="https://github.com/oliverhallow"  target="_blank" class="social-link">
-                                    <img src="icons/github.svg" alt="GitHub">
-                                </a>
-                                <a href="https://www.linkedin.com/in/oliver-lindberg-skundberg-b8202928a/"   target="_blank" class="social-link">
-                                    <img src="icons/linkedin.svg"  alt="LinkedIn">
-                                </a>
-                                <a href="mailto:oliverhallow@gmail.com" target="_blank" class="social-link">
-                                    <img src="icons/email.svg" alt="Email">
-                                </a>
-                            </div>
-                        </div>
                     </div>
                     <div class="member-info">
                         <h3 class="member-name">Oliver Lindberg Skundberg</h3>
                         <p class="member-role">Utvikler</p>
-                        <p class="member-description">
-                            Interresert i alt innenfor utvikling, med spesiell interesse for data analyse.
-                            Har erfaring med kommunikasjon, anvendelse av designprinsipper samt grunnleggende dataanalyse.
-                        </p>
-                        <div class="member-skills">
-                            <span class="skill-tag">Python</span>
-                            <span class="skill-tag">SQL</span>
-                            <span class="skill-tag">HTML</span>
-                            <span class="skill-tag">CSS</span>
-                            <span class="skill-tag">Javascript</span>
-                            <span class="skill-tag">Figma</span>
+                        <button class="view-member-btn-inline">
+                            <span>Se Mer</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                    
+                    <!-- Detaljert innhold for modal -->
+                    <div class="member-detailed-content" style="display: none;">
+                        <div class="modal-member-header">
+                            <div class="modal-member-image-container">
+                                <img src="img/OliverLS.jpeg" alt="Oliver Lindberg Skundberg">
+                            </div>
+                            <div class="modal-member-info">
+                                <h3 class="modal-member-name">Oliver Lindberg Skundberg</h3>
+                                <p class="modal-member-role">Utvikler</p>
+                                <div class="modal-member-social">
+                                    <a href="https://github.com/oliverhallow" target="_blank" class="social-link">
+                                        <img src="icons/github.svg" alt="GitHub">
+                                    </a>
+                                    <a href="https://www.linkedin.com/in/oliver-lindberg-skundberg-b8202928a/" target="_blank" class="social-link">
+                                        <img src="icons/linkedin.svg" alt="LinkedIn">
+                                    </a>
+                                    <a href="mailto:oliverhallow@gmail.com" target="_blank" class="social-link">
+                                        <img src="icons/email.svg" alt="Email">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-member-description">
+                            <h4>Om Meg</h4>
+                            <p>
+                                Interresert i alt innenfor utvikling, med spesiell interesse for data analyse.
+                                Har erfaring med kommunikasjon, anvendelse av designprinsipper samt grunnleggende dataanalyse.
+                            </p>
+                        </div>
+                        <div class="modal-member-skills">
+                            <h4>Ferdigheter</h4>
+                            <div class="member-skills">
+                                <span class="skill-tag">Python</span>
+                                <span class="skill-tag">SQL</span>
+                                <span class="skill-tag">HTML</span>
+                                <span class="skill-tag">CSS</span>
+                                <span class="skill-tag">Javascript</span>
+                                <span class="skill-tag">Figma</span>
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Tobias -->
-                <div class="team-member">
+                <div class="team-member" onclick="openTeamModal(this)" data-member-id="tobias">
                     <div class="member-image">
                         <img src="img/Tobias.png" alt="Tobias E. Ek - Dokumentasjonsansvarlig og Frontend utvikler">
                         <div class="placeholder-image">
                             <i class="fas fa-user"></i>
                         </div>
-                        <div class="member-overlay">
-                            <div class="member-social">
-                                <a href="https://github.com/Tobiasee16" target="_blank" class="social-link">
-                                    <img src="icons/github.svg" alt="GitHub">
-                                </a>
-                                 <a href="http://linkedin.com/in/tobias-engedal-ek-20288b28b" target="_blank" class="social-link">
-                                    <img src="icons/linkedin.svg" alt="LinkedIn">
-                                </a>
-                                 <a href="mailto:engedaltobias@icloud.com" target="_blank" class="social-link">
-                                    <img src="icons/email.svg" alt="Email">
-                                </a>
-                            </div>
-                        </div>
                     </div>
                     <div class="member-info">
                         <h3 class="member-name">Tobias Engedal Ek</h3>
                         <p class="member-role">Dokumentasjonsansvarlig</p>
-                        <p class="member-description">
-                            Jeg er 22 år gammel og studerer It og Informasjonsystemer hos UiA.
-                            På fritiden min liker jeg å drive med styrketrening, gaming og klatring.
-                            Interessen og lærevilligheten min for ny teknologi er stor, og sørger for at jeg har god motivasjon til å legge ned tid og energi til spennende prosjekter.   
-                            En del av ansvaret jeg vil ta på meg er å sørge for at all viktig informasjon i prosjektet er oppdatert og lett å finne. 
-                            Fra tidligere prosjekter så har jeg fått god erfaring med front-end utvikling. 
-                        </p>
-                        <div class="member-skills">
-                           <span class="skill-tag">HTML</span>
-                            <span class="skill-tag">CSS</span>
-                            <span class="skill-tag">Kommunikasjon</span>
-                            <span class="skill-tag">Agile</span>
-                            <span class="skill-tag">Python</span>
-                            <span class="skill-tag">SQL</span>
-                            <span class="skill-tag">Javascript</span>
-                            <span class="skill-tag">Figma</span>
+                        <button class="view-member-btn-inline">
+                            <span>Se Mer</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                    
+                    <!-- Detaljert innhold for modal -->
+                    <div class="member-detailed-content" style="display: none;">
+                        <div class="modal-member-header">
+                            <div class="modal-member-image-container">
+                                <img src="img/Tobias.png" alt="Tobias Engedal Ek">
+                            </div>
+                            <div class="modal-member-info">
+                                <h3 class="modal-member-name">Tobias Engedal Ek</h3>
+                                <p class="modal-member-role">Dokumentasjonsansvarlig</p>
+                                <div class="modal-member-social">
+                                    <a href="https://github.com/Tobiasee16" target="_blank" class="social-link">
+                                        <img src="icons/github.svg" alt="GitHub">
+                                    </a>
+                                    <a href="http://linkedin.com/in/tobias-engedal-ek-20288b28b" target="_blank" class="social-link">
+                                        <img src="icons/linkedin.svg" alt="LinkedIn">
+                                    </a>
+                                    <a href="mailto:engedaltobias@icloud.com" target="_blank" class="social-link">
+                                        <img src="icons/email.svg" alt="Email">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-member-description">
+                            <h4>Om Meg</h4>
+                            <p>
+                                Jeg er 22 år gammel og studerer It og Informasjonsystemer hos UiA.
+                                På fritiden min liker jeg å drive med styrketrening, gaming og klatring.
+                                Interessen og lærevilligheten min for ny teknologi er stor, og sørger for at jeg har god motivasjon til å legge ned tid og energi til spennende prosjekter.   
+                                En del av ansvaret jeg vil ta på meg er å sørge for at all viktig informasjon i prosjektet er oppdatert og lett å finne. 
+                                Fra tidligere prosjekter så har jeg fått god erfaring med front-end utvikling. 
+                            </p>
+                        </div>
+                        <div class="modal-member-skills">
+                            <h4>Ferdigheter</h4>
+                            <div class="member-skills">
+                                <span class="skill-tag">HTML</span>
+                                <span class="skill-tag">CSS</span>
+                                <span class="skill-tag">Kommunikasjon</span>
+                                <span class="skill-tag">Agile</span>
+                                <span class="skill-tag">Python</span>
+                                <span class="skill-tag">SQL</span>
+                                <span class="skill-tag">Javascript</span>
+                                <span class="skill-tag">Figma</span>
+                            </div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Team Member Modal -->
+        <div id="teamModal" class="team-modal" onclick="closeTeamModal(event)">
+            <div class="modal-content" onclick="event.stopPropagation()">
+                <button class="modal-close" onclick="closeTeamModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+                <div id="teamModalBody" class="modal-body">
+                    <!-- Innhold vil bli satt inn her -->
                 </div>
             </div>
         </div>
@@ -364,7 +481,7 @@
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">Tidligere Prosjekter</h2>
-                <p class="section-subtitle">En samling av våre tidligere arbeider og prestasjoner</p>
+                <p class="section-subtitle">En samling av våre tidligere prosjekter og prestasjoner</p>
             </div>
             
             <div class="previous-projects-grid">
@@ -973,6 +1090,11 @@
             </div>
         </div>
     </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTop" class="scroll-to-top" aria-label="Scroll til toppen">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 
     <script src="script.js"></script>
 </body>

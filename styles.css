@@ -800,6 +800,7 @@ section {
 /* Prosjekter Seksjon */
 .projects-section {
     background: var(--white);
+    padding-top: var(--spacing-lg);
 }
 
 /* Tidligere Prosjekter Seksjon */

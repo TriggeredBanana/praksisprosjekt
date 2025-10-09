@@ -1349,8 +1349,10 @@ section {
 
 .collaboration-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: var(--spacing-lg);
+    justify-content: center;
+    max-width: 100%;
 }
 
 .collaboration-item {
@@ -1361,6 +1363,7 @@ section {
     transition: all var(--transition-normal);
     border: 2px solid var(--gray-200);
     box-shadow: var(--shadow-sm);
+    max-width: 100%;
 }
 
 .collaboration-item:hover {
@@ -1585,7 +1588,12 @@ section {
     }
     
     .collaboration-grid {
-        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: var(--spacing-md);
+    }
+    
+    .collaboration-item {
+        max-width: 100%;
     }
     
     .features-grid {
@@ -1632,6 +1640,10 @@ section {
     .collaboration-grid {
         grid-template-columns: 1fr;
         gap: var(--spacing-md);
+    }
+    
+    .collaboration-item {
+        max-width: 100%;
     }
     
     .features-header {
@@ -1744,6 +1756,19 @@ section {
     }
     
     .modal-collaboration {
+        padding: var(--spacing-lg);
+    }
+    
+    .collaboration-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-sm);
+    }
+    
+    .collaboration-item {
+        max-width: 100%;
+    }
+    
+    .modal-features-section {
         padding: var(--spacing-lg);
     }
 }

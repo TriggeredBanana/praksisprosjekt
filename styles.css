@@ -1582,6 +1582,49 @@ section {
     filter: brightness(1.1);
 }
 
+/* Modal Video Showcase */
+.modal-video-showcase {
+    margin-top: var(--spacing-xl);
+    padding: var(--spacing-xl);
+    background: var(--gray-50);
+    border-radius: var(--radius-xl);
+    border: 2px solid var(--gray-200);
+}
+
+.modal-video-showcase h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--gray-900);
+    margin-bottom: var(--spacing-xs);
+}
+
+.modal-video-showcase p {
+    color: var(--gray-600);
+    font-size: 1rem;
+    margin-bottom: var(--spacing-lg);
+}
+
+.modal-video-showcase .video-wrapper {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-xl);
+    background: var(--gray-900);
+}
+
+.modal-video-showcase .video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: var(--radius-lg);
+}
+
 /* Responsivt Design */
 @media (max-width: 1024px) {
     .previous-projects-grid {
@@ -1659,6 +1702,19 @@ section {
     
     .modal-actions {
         flex-direction: column;
+    }
+    
+    .modal-video-showcase {
+        padding: var(--spacing-lg);
+        margin-top: var(--spacing-lg);
+    }
+    
+    .modal-video-showcase h3 {
+        font-size: 1.25rem;
+    }
+    
+    .modal-video-showcase p {
+        font-size: 0.9375rem;
     }
 }
 
@@ -1771,6 +1827,20 @@ section {
     
     .modal-features-section {
         padding: var(--spacing-lg);
+    }
+    
+    .modal-video-showcase {
+        padding: var(--spacing-md);
+        margin-top: var(--spacing-md);
+    }
+    
+    .modal-video-showcase h3 {
+        font-size: 1.125rem;
+    }
+    
+    .modal-video-showcase p {
+        font-size: 0.875rem;
+        margin-bottom: var(--spacing-md);
     }
 }
 

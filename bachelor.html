@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bachelorprosjekt - Gruppe 8</title>
+    <meta name="description" content="Dokumentasjon av vårt bachelorprosjekt hos Norkart.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigasjon -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html" class="logo-link">
+                    <span class="gradient-text">Gruppe 8</span>
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html#about" class="nav-link">Verdier</a></li>
+                <li><a href="index.html#team" class="nav-link">Teamet</a></li>
+                <li><a href="index.html#previous-projects" class="nav-link">Tidligere Prosjekter</a></li>
+                <li><a href="status1.html" class="nav-link">Status 1</a></li>
+                <li><a href="status2.html" class="nav-link">Status 2</a></li>
+                <li><a href="bachelor.html" class="nav-link">Bachelor</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Bachelor innhold seksjon -->
+    <section class="bachelor-section">
+        <div class="container">
+            <!-- Header -->
+            <div class="bachelor-header">
+                <h1 class="bachelor-title">Bachelorprosjekt</h1>
+                <p class="bachelor-subtitle">Hos Norkart</p>
+            </div>
+
+            <!-- Seksjon 1: Bedrift og Problemstilling -->
+            <div class="bachelor-simple-card">
+                <h2 class="simple-card-title">Problemstilling</h2>
+                <p>Gruppen vil undersøke mulighetene til å utvikle en KI-Agent som er tilspisset oppgaver knyttet til geografisk data, konsekvensutredninger (KU) og planprosess - og hvordan dette kan bidra med demokratisering av prosessen slik at det kan forstås og tolkes bedre av flere.</p>
+                
+                <h3>Hvorfor er dette viktig?</h3>
+                <p>Kjernen av problemstillingen ligger i demokratiseringsprosessen, som kan oppfattes krunglete. Dette skyldes blant annet konsekvensutredningene som kan være på flere hundre sider, som leveres inn rett før en politisk sak skal stemmes på. Det er svært liten sannsynlighet for at alt er rukket og lest igjennom og i det hele tatt om leseren forstår hva det innebærer. Formålet med prosjektet er å gjøre dette lett tilgjengelig, slik at det enklere kan forstås, tolkes og bli tatt en avgjørelse basert på viten, og ikke hva en har fått med seg etter å ha skumlest et viktig og stort dokument.</p>
+                
+                <h3>Hva skal gjøres?</h3>
+                <p>Hovedformålet med oppgaven er å lage en Model Context Protocol som spesialiserer seg på geografisk data, derav har vi gitt navnet «GeoMCP». Dette skal fungere som en «generisk GIS-Ekspert», og vi utvikler KI-Agenter som skal brukes til reelle oppgaver knyttet til planprosessen og konsekvensutredningen.</p>
+                
+                <p>GeoMCP vil ha data basert på areal-konflikter mellom eksisterende plangrunnlag, konsekvensutredninger, GIS-analyser og klima & miljø. Optimalt sett vil dette være en kombinasjon av både kart og tekst som brukes i KI-agentene, for å bidra til demokratiseringen av prosessen, både for politikere og innbyggere.</p>
+                
+                <p>Gruppen må gjøre forarbeid angående Model Context Protocols (MCP), hvilke LLMs som er best egnet til prosjektet samt andre relevante teknologier. Utvikle en forståelse for KU og tilhørende data. Produktet skal kunne bli integrert i eksisterende systemer og være modularisert slik at det kan videreutvikles.</p>
+                
+                <h3>Research Questions</h3>
+                <ul>
+                    <li>Hvordan kan en KI-agent bruke geografisk data og konsekvensutredning til å gjøre komplekse planprosesser mer forståelige for et bredere publikum?</li>
+                    <li>Hvordan kan visualisering av geografisk data i kombinasjon med KI-generert forklaring påvirke forståelsen og beslutningsgrunnlaget hos brukerne?</li>
+                    <li>Hvilke typer informasjon i konsekvensutredningen er mest utfordrende å forstå, og hvordan kan en KI-agent bidra til å forenkle eller forklare disse uten å forvrenge innholdet?</li>
+                </ul>
+            </div>
+
+            <!-- Seksjon 2: Kvalitetsaspekter -->
+            <div class="bachelor-simple-card">
+                <h2 class="simple-card-title">Kvalitetsaspekter og Målsetninger</h2>
+                
+                <h3>Kvalitetsaspekter i produktet</h3>
+                <p>Kvalitetsaspektene i produktet vårt vil være:</p>
+                <ul>
+                    <li>Funksjonalitet: En fungerende visuell fremvisning av informasjon knyttet til GIS og KU ved hjelp av AI-agenter i et MCP-nettverk</li>
+                    <li>Brukervennlighet: Informasjonen skal presenteres på en forståelig måte for både fagpersoner og allmennheten</li>
+                    <li>Nytteverdi: Levere et produkt som Norkart kan ha nytte av og bygge videre på</li>
+                    <li>Modularitet: Systemet skal være modulært og enkelt å integrere i eksisterende systemer</li>
+                </ul>
+                
+                <h3>Hvorfor disse kvalitetsaspektene?</h3>
+                <p>Disse aspektene er valgt fordi de støtter opp under hovedformålet med demokratisering av planprosessen. Funksjonalitet og brukervennlighet er essensielt for at systemet faktisk skal tas i bruk, mens nytteverdi og modularitet sikrer at produktet kan leve videre etter prosjektets slutt.</p>
+                
+                <h3>Hvordan måle kvalitet?</h3>
+                <p>Gruppen kan indikere kvalitet oppnådd i prosjektet ved å ha en oversikt over aspekter og egenskaper som skal oppnås. Ved hjelp av en slik plan kan gruppen sammenligne og se hvilke aspekter er oppnådd og i hvilken grad det reelle produktet ligner på ønsket resultat.</p>
+                
+                <p>Konkrete målemetoder inkluderer:</p>
+                <ul>
+                    <li>Regelmessige demonstrasjoner og tilbakemeldinger fra Norkart</li>
+                    <li>Testing av funksjonalitet mot definerte bruksscenarier</li>
+                    <li>Evaluering av brukervennlighet gjennom interne og eksterne gjennomganger</li>
+                    <li>Vurdering av modularitet gjennom teknisk review</li>
+                </ul>
+            </div>
+
+            <!-- Seksjon 3: Arbeidsmetodikk og Prosjektstyring -->
+            <div class="bachelor-simple-card">
+                <h2 class="simple-card-title">Arbeidsmetodikk og Prosjektstyring</h2>
+                
+                <h3>Verktøy og metoder</h3>
+                <p>Gruppen benytter seg av Trello for å holde styring på mål, oppgaver, milepæler og backlog. Sprinter vil også tas i bruk, slik at gruppen konstant har klare mål, og en ide av hva som må prioriteres. Gruppen ønsker også å ta i bruk daglige Scrum-standups og planning poker for å estimere tidsbruk. Gruppen vil ta i bruk GitHub for å kunne samarbeide sømløst med kode, men denne GitHub-siden opprettes av veileder hos Norkart.</p>
+                
+                <h3>Backlog og kvalitetssikring</h3>
+                <p>For å kvalitetssikre backlog har vi tydelige beskrivelser av oppgaver, og prioriterer basert på verdi, risiko og avhengigheter. Hver oppgave skal ha:</p>
+                <ul>
+                    <li>Klar beskrivelse av hva som skal gjøres</li>
+                    <li>Prioritet basert på prosjektets mål</li>
+                    <li>Estimert tidsbruk</li>
+                    <li>Avhengigheter til andre oppgaver</li>
+                </ul>
+                
+                <h3>Kvalitetssikring av plan</h3>
+                <p>Gruppen skal ha møte/statuspresentasjon for veileder i Norkart hver 2. uke, som de ulike sprintene vil fokusere rundt. Dette sikrer at planen kontinuerlig evalueres og justeres basert på faktisk fremdrift og tilbakemeldinger.</p>
+                
+                <h3>Estimater og timerapportering</h3>
+                <p>Estimater hjelper oss å forstå hvor mye tid og ressurser en oppgave vil kreve. Vi bruker planning poker for å få en felles forståelse av oppgavenes kompleksitet.</p>
+                
+                <p>Timerapportering bidrar til kontroll ved å vise faktisk tidsbruk per oppgave, og hvordan ressurser faktisk blir benyttet. Dette gir oss grunnlag for å justere fremtidige estimater og identifisere områder hvor vi trenger mer tid eller kompetanse.</p>
+                
+                <h3>Ressursbruk</h3>
+                <p>Ressursbruken innebærer å balansere kapasitet mot planlagt arbeid, slik at man unngår overbelastning og underutnyttelse.</p>
+            </div>
+
+            <!-- Seksjon 4: Ressursutnyttelse -->
+            <div class="bachelor-simple-card">
+                <h2 class="simple-card-title">Ressursutnyttelse</h2>
+                
+                <h3>Hvordan sikre effektiv ressursbruk?</h3>
+                <p>Gruppen er heldig å ha kontorplass hos Norkart hver dag, noe som vil bli brukt flittig for å effektivisere tiden som brukes på prosjektet. Dette bidrar til lettere kartlegging, kommunikasjon og kunnskap, da det ikke er noen barrierer mellom gruppen og fagfolkene på Norkart.</p>
+                
+                <p>Gruppen vil også sette opp milepæler for å ha faste mål. Dette er både for gruppens del og vår veileder i Norkart, da gruppen skal ha statuspresentasjoner hver 2. uke, slik at gruppen kan presentere spørsmål, problemer, og selve statusen til prosjektet.</p>
+                
+                <p>Selvfølgelig vil gruppen selv ta fullt eierskap til prosjektet, men med hjelp fra fagfolkene i Norkart vil det bli en naturlig del av prosjektsyklusen å få tilbakemelding på statusene, slik at gruppen også kan tilrettelegge om ressurser blir brukt ineffektivt.</p>
+                
+                <h3>Indikatorer på god ressursutnyttelse</h3>
+                <ul>
+                    <li>Oppgaver blir fullført innenfor estimert tid</li>
+                    <li>Jevn fremdrift mot milepæler</li>
+                    <li>Positive tilbakemeldinger fra veileder ved statuspresentasjoner</li>
+                    <li>Gruppemedlemmer har balansert arbeidsbelastning</li>
+                    <li>Effektiv bruk av kompetanse hos både gruppemedlemmer og fagfolk hos Norkart</li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Bunntekst -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="logo-text">Gruppe 8</span>
+                    <p>Fem studenter på jakt etter et spennende bachelorprosjekt.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="index.html#about">Om Oss</a>
+                    <a href="index.html#team">Teamet</a>
+                    <a href="index.html#previous-projects">Tidligere Prosjekter</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Gruppe 8. Studentportefølje.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top -->
+    <button id="scrollToTop" class="scroll-to-top" aria-label="Scroll til toppen">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>

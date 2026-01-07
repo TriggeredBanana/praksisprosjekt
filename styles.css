@@ -2451,6 +2451,116 @@ section {
     backdrop-filter: blur(20px);
 }
 
+/* Bachelor side styling */
+.bachelor-section {
+    background: var(--gray-50);
+    padding: var(--spacing-3xl) 0;
+    min-height: calc(100vh - 70px);
+}
+
+.bachelor-header {
+    text-align: center;
+    margin-bottom: var(--spacing-2xl);
+    padding-top: var(--spacing-xl);
+}
+
+.bachelor-title {
+    font-size: clamp(2rem, 5vw, 2.5rem);
+    color: var(--gray-900);
+    margin-bottom: var(--spacing-xs);
+}
+
+.bachelor-subtitle {
+    font-size: 1.125rem;
+    color: var(--gray-500);
+    margin: 0;
+}
+
+.bachelor-simple-card {
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-2xl);
+    margin-bottom: var(--spacing-xl);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--gray-200);
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.simple-card-title {
+    font-size: 1.75rem;
+    color: var(--gray-900);
+    margin-bottom: var(--spacing-lg);
+    padding-bottom: var(--spacing-sm);
+    border-bottom: 2px solid var(--gray-200);
+}
+
+.bachelor-simple-card h3 {
+    font-size: 1.25rem;
+    color: var(--gray-900);
+    margin-top: var(--spacing-lg);
+    margin-bottom: var(--spacing-sm);
+}
+
+.bachelor-simple-card p {
+    color: var(--gray-600);
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: var(--spacing-md);
+}
+
+.bachelor-simple-card ul {
+    margin: var(--spacing-md) 0;
+    padding-left: var(--spacing-xl);
+}
+
+.bachelor-simple-card ul li {
+    color: var(--gray-600);
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: var(--spacing-sm);
+}
+
+/* Responsive design for bachelor side */
+@media (max-width: 768px) {
+    .bachelor-section {
+        padding: var(--spacing-xl) 0;
+    }
+
+    .bachelor-header {
+        margin-bottom: var(--spacing-xl);
+        padding-top: var(--spacing-md);
+    }
+
+    .bachelor-simple-card {
+        padding: var(--spacing-lg);
+        margin-bottom: var(--spacing-lg);
+    }
+
+    .simple-card-title {
+        font-size: 1.5rem;
+    }
+
+    .bachelor-simple-card h3 {
+        font-size: 1.125rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .bachelor-simple-card {
+        padding: var(--spacing-md);
+    }
+
+    .bachelor-title {
+        font-size: 1.5rem;
+    }
+
+    .simple-card-title {
+        font-size: 1.25rem;
+    }
+}
+
 /* Responsivt Design */
 @media (max-width: 1200px) {
     .nav-container {

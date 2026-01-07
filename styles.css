@@ -280,7 +280,7 @@ p {
     align-items: flex-end;
     justify-content: center;
     background: url('img/gruppebilde_techpoint.JPG') center/cover no-repeat;
-    padding: var(--spacing-3xl) 0;
+    padding: var(--spacing-xl) 0;
     position: relative;
 }
 
@@ -391,9 +391,8 @@ section {
 /* Verdier Seksjon */
 .values-section {
     background: var(--gray-50);
-    padding: var(--spacing-2xl);
+    padding: var(--spacing-xl);
     border-radius: var(--radius-2xl);
-    margin-top: var(--spacing-xl);
 }
 
 .values-title {
@@ -2117,7 +2116,7 @@ section {
 
 /* Kontakt Bunntekst */
 .contact-footer {
-    margin-top: var(--spacing-2xl);
+    margin-bottom: var(--spacing-xl);
     text-align: center;
     padding-top: var(--spacing-xl);
     border-top: 1px solid var(--gray-200);

@@ -7,11 +7,19 @@
 
 :root {
     /* Fargepalett */
+    --primary-color: #228922;
+    --primary-light: #818cf8;
+    --primary-dark: #4f46e5;
+    --secondary-color: #6a0dff;
+    --accent-color: #06d45f; 
+
+    /**
     --primary-color: #3b90ff;
     --primary-light: #818cf8;
     --primary-dark: #4f46e5;
     --secondary-color: #6a0dff;
-    --accent-color: #01b0f5;
+    --accent-color: #01b0f5; 
+    **/
     
     /* Nøytrale Farger */
     --white: #ffffff;
@@ -84,6 +92,7 @@ body {
     margin: 0 auto;
     padding: 0 var(--spacing-md);
 }
+
 
 /* Ekstra brede skjermer */
 @media (min-width: 1600px) {

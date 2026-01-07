@@ -7,11 +7,19 @@
 
 :root {
     /* Fargepalett */
+    --primary-color: #228922;
+    --primary-light: #818cf8;
+    --primary-dark: #4f46e5;
+    --secondary-color: #6a0dff;
+    --accent-color: #06d45f; 
+
+    /**
     --primary-color: #3b90ff;
     --primary-light: #818cf8;
     --primary-dark: #4f46e5;
     --secondary-color: #6a0dff;
-    --accent-color: #01b0f5;
+    --accent-color: #01b0f5; 
+    **/
     
     /* Nøytrale Farger */
     --white: #ffffff;
@@ -80,9 +88,171 @@ body {
 
 /* Beholder */
 .container {
-    max-width: 1400px;
+    max-width: 1000px;
     margin: 0 auto;
     padding: 0 var(--spacing-md);
+}
+
+/* Status sider */
+.status-section {
+    background: var(--gray-50);
+    min-height: calc(100vh - 70px);
+}
+
+.status-header {
+    text-align: center;
+    margin-bottom: var(--spacing-3xl);
+    padding-top: var(--spacing-xl);
+}
+
+.status-title {
+    font-size: clamp(2rem, 5vw, 2.5rem);
+    color: var(--gray-900);
+}
+
+.status-date {
+    color: var(--gray-500);
+    font-size: 1rem;
+    margin: 0;
+}
+
+.status-card {
+    background: var(--white);
+    border-radius: var(--radius-xl);
+    padding: var(--spacing-xl);
+    margin-bottom: var(--spacing-lg);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--gray-200);
+    transition: all var(--transition-fast);
+}
+
+.status-card:hover {
+    box-shadow: var(--shadow-md);
+    border-color: var(--gray-300);
+}
+
+.card-title {
+    font-size: 1.5rem;
+    color: var(--gray-900);
+    margin-bottom: var(--spacing-md);
+    padding-bottom: var(--spacing-sm);
+    border-bottom: 2px solid var(--gray-200);
+}
+
+.info-grid {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.info-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-sm) 0;
+    border-bottom: 1px solid var(--gray-100);
+}
+
+.info-row:last-child {
+    border-bottom: none;
+}
+
+.info-label {
+    font-weight: 600;
+    color: var(--gray-700);
+    font-size: 0.95rem;
+}
+
+.info-value {
+    color: var(--gray-900);
+    font-size: 1rem;
+}
+
+.status-badge {
+    display: inline-block;
+    padding: var(--spacing-xs) var(--spacing-md);
+    background: var(--gradient-primary);
+    color: var(--white);
+    border-radius: var(--radius-lg);
+    font-weight: 600;
+    font-size: 0.875rem;
+}
+
+.status-text {
+    line-height: 1.7;
+    color: var(--gray-600);
+    font-size: 1rem;
+    margin: 0;
+}
+
+.status-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.status-list li {
+    padding: var(--spacing-sm) var(--spacing-md);
+    margin-bottom: var(--spacing-xs);
+    background: var(--gray-50);
+    border-radius: var(--radius-md);
+    border-left: 3px solid var(--primary-color);
+    color: var(--gray-700);
+    transition: all var(--transition-fast);
+}
+
+.status-list li:hover {
+    background: var(--white);
+    transform: translateX(4px);
+    box-shadow: var(--shadow-sm);
+}
+
+.status-list li::before {
+    content: '•';
+    color: var(--primary-color);
+    font-weight: bold;
+    margin-right: var(--spacing-sm);
+}
+
+/* Responsive design for status sider */
+@media (max-width: 768px) {
+    .status-section {
+        padding: var(--spacing-xl) 0;
+    }
+
+    .status-header {
+        margin-bottom: var(--spacing-xl);
+        padding-top: var(--spacing-md);
+    }
+
+    .status-card {
+        padding: var(--spacing-lg);
+        margin-bottom: var(--spacing-md);
+    }
+
+    .card-title {
+        font-size: 1.25rem;
+    }
+
+    .info-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--spacing-xs);
+    }
+}
+
+@media (max-width: 480px) {
+    .status-card {
+        padding: var(--spacing-md);
+    }
+
+    .status-title {
+        font-size: 1.5rem;
+    }
+
+    .status-list li {
+        padding: var(--spacing-sm);
+    }
 }
 
 /* Ekstra brede skjermer */
@@ -280,7 +450,7 @@ p {
     align-items: flex-end;
     justify-content: center;
     background: url('img/gruppebilde_techpoint.JPG') center/cover no-repeat;
-    padding: var(--spacing-3xl) 0;
+    padding: var(--spacing-xl) 0;
     position: relative;
 }
 
@@ -391,9 +561,8 @@ section {
 /* Verdier Seksjon */
 .values-section {
     background: var(--gray-50);
-    padding: var(--spacing-2xl);
+    padding: var(--spacing-xl);
     border-radius: var(--radius-2xl);
-    margin-top: var(--spacing-xl);
 }
 
 .values-title {
@@ -2117,7 +2286,7 @@ section {
 
 /* Kontakt Bunntekst */
 .contact-footer {
-    margin-top: var(--spacing-2xl);
+    margin-bottom: var(--spacing-xl);
     text-align: center;
     padding-top: var(--spacing-xl);
     border-top: 1px solid var(--gray-200);

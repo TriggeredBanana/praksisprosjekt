@@ -88,17 +88,22 @@ function initializeNavigation() {
     // Jevn rulling for navigasjonslenker
     navLinks.forEach(link => {
         link.addEventListener('click', function(e) {
-            e.preventDefault();
             const targetId = this.getAttribute('href');
-            const targetSection = document.querySelector(targetId);
             
-            if (targetSection) {
-                const offsetTop = targetSection.offsetTop - 70; // Juster for fast navbar
-                window.scrollTo({
-                    top: offsetTop,
-                    behavior: 'smooth'
-                });
+            // Håndter kun interne hash-lenker (eks: #home)
+            if (targetId && targetId.startsWith('#')) {
+                e.preventDefault();
+                const targetSection = document.querySelector(targetId);
+                
+                if (targetSection) {
+                    const offsetTop = targetSection.offsetTop - 70; // Juster for navbar
+                    window.scrollTo({
+                        top: offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
             }
+            // Hvis lenken ikke starter med # så håndterer browseren den normalt
         });
     });
 }
@@ -476,18 +481,6 @@ function isValidEmail(email) {
 
 // Initialiser stiler
 addAnimationStyles();
-
-// Konsollmelding for utviklere
-console.log(`
-🚀 Hei utvikler! 
-
-Dette er porteføljen til Gruppe 8.
-Hvis du er interessert i å samarbeide med oss, 
-ta gjerne kontakt!
-
-Mvh,
-Gruppe 8 💻
-`);
 
 // Åpne prosjekt modal
 function openProjectModal(card) {

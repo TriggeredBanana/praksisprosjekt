@@ -40,84 +40,104 @@
 
     <!-- Status Content Section -->
     <section class="status-section">
-        <div class="container">
-            <!-- Header -->
-            <div class="status-header">
-                <h1 class="status-title">Status <span class="gradient-text">#2</span></h1>
-                <p class="status-date">Sprint 3 - Sprint 4</p>
-            </div>
+        <div class="status-page">
 
-            <!-- Oversikt -->
-            <div class="status-card">
-                <h2 class="card-title">Prosjektoversikt</h2>
-                <div class="info-grid">
-                    <div class="info-row">
-                        <span class="info-label">Prosjektnavn:</span>
-                        <span class="info-value">Prosjektnavn</span>
+            <!-- Header -->
+            <header class="status-hero">
+                <div class="status-hero-label">
+                    <span class="status-badge">Underveis</span>
+                </div>
+                <h1 class="status-hero-title">Status <span>#2</span></h1>
+                <p class="status-hero-subtitle">En statusoppdatering fra gruppe 8</p>
+
+                <div class="status-meta">
+                    <div class="status-meta-item">
+                        <span class="meta-key">Prosjekt</span>
+                        <span class="meta-val">GeoMCP - KI-agent med GIS-verktøy</span>
                     </div>
-                    <div class="info-row">
-                        <span class="info-label">Bedrift:</span>
-                        <span class="info-value">Norkart</span>
+                    <div class="status-meta-item">
+                        <span class="meta-key">Bedrift</span>
+                        <span class="meta-val">Norkart</span>
                     </div>
-                    <div class="info-row">
-                        <span class="info-label">Periode:</span>
-                        <span class="info-value">9. Februar - 11. Mars</span>
+                    <div class="status-meta-item">
+                        <span class="meta-key">Periode</span>
+                        <span class="meta-val">9. Februar – 11. Mars</span>
                     </div>
-                    <div class="info-row">
-                        <span class="info-label">Status 1:</span>
-                        <span class="status-badge">Underveis</span>
+                    <div class="status-meta-item">
+                        <span class="meta-key">Sprint</span>
+                        <span class="meta-val">3 – 4</span>
                     </div>
                 </div>
-            </div>
+            </header>
 
-            <!-- Sammendrag -->
-            <div class="status-card">
-                <h2 class="card-title">Sammendrag</h2>
-                <p class="status-text">Sammendrag kommer...</p>
+            <!-- Video (legg til embed-link når video er klar) -->
+            <!--
+            <div class="status-video-wrap">
+                <div class="status-video-embed">
+                    <iframe
+                        src="https://www.youtube.com/embed/VIDEO_ID_HER"
+                        title="Status 2 Video – Gruppe 8"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                <p class="status-video-caption">Status 2 video</p>
             </div>
+            -->
 
-            <!-- Gjennomført Arbeid -->
-            <div class="status-card">
-                <h2 class="card-title">Gjennomført Arbeid</h2>
-                <ul class="status-list">
-                    <li>Aktivitet/oppgave 1</li>
-                    <li>Aktivitet/oppgave 2</li>
-                    <li>Aktivitet/oppgave 3</li>
-                </ul>
-            </div>
+            <!-- Main content -->
+            <article class="status-article">
 
-            <!-- Pågående Arbeid -->
-            <div class="status-card">
-                <h2 class="card-title">Pågående Arbeid</h2>
-                <ul class="status-list">
-                    <li>Aktivitet/oppgave 1</li>
-                    <li>Aktivitet/oppgave 2</li>
-                    <li>Aktivitet/oppgave 3</li>
-                </ul>
-            </div>
+                <!-- Sammendrag -->
+                <section class="status-block">
+                    <h2>Sammendrag</h2>
+                    <p>Sammendrag kommer...</p>
+                </section>
 
-            <!-- Planlagt Arbeid -->
-            <div class="status-card">
-                <h2 class="card-title">Neste Steg</h2>
-                <ul class="status-list">
-                    <li>Planlagt aktivitet 1</li>
-                    <li>Planlagt aktivitet 2</li>
-                    <li>Planlagt aktivitet 3</li>
-                </ul>
-            </div>
+                <!-- Gjennomført Arbeid -->
+                <section class="status-block">
+                    <h2>Gjennomført arbeid</h2>
+                    <ul>
+                        <li>Aktivitet/oppgave 1</li>
+                        <li>Aktivitet/oppgave 2</li>
+                        <li>Aktivitet/oppgave 3</li>
+                    </ul>
+                </section>
 
-            <!-- Utfordringer -->
-            <div class="status-card">
-                <h2 class="card-title">Utfordringer & Risiko</h2>
-                <p class="status-text">Beskrivelse av eventuelle utfordringer eller risikofaktorer.</p>
-            </div>
+                <!-- Pågående Arbeid -->
+                <section class="status-block">
+                    <h2>Pågående arbeid</h2>
+                    <ul>
+                        <li>Aktivitet/oppgave 1</li>
+                        <li>Aktivitet/oppgave 2</li>
+                        <li>Aktivitet/oppgave 3</li>
+                    </ul>
+                </section>
 
-            <!-- Læring -->
-            <div class="status-card">
-                <h2 class="card-title">Læring & Refleksjon</h2>
-                <p class="status-text">Hva har teamet lært i denne perioden? Hvilke erfaringer tar vi med videre?</p>
-            </div>
+                <!-- Neste Steg -->
+                <section class="status-block">
+                    <h2>Neste steg</h2>
+                    <ul>
+                        <li>Planlagt aktivitet 1</li>
+                        <li>Planlagt aktivitet 2</li>
+                        <li>Planlagt aktivitet 3</li>
+                    </ul>
+                </section>
 
+                <!-- Utfordringer -->
+                <section class="status-block">
+                    <h2>Utfordringer &amp; risiko</h2>
+                    <p>Beskrivelse av eventuelle utfordringer eller risikofaktorer.</p>
+                </section>
+
+                <!-- Læring -->
+                <section class="status-block">
+                    <h2>Læring &amp; refleksjon</h2>
+                    <p>Hva har teamet lært i denne perioden? Hvilke erfaringer tar vi med videre?</p>
+                </section>
+
+            </article>
         </div>
     </section>
 

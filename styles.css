@@ -116,6 +116,36 @@ body {
     margin: 0;
 }
 
+.status-subtitle {
+    font-size: 1.25rem;
+    color: var(--gray-600);
+    margin-top: var(--spacing-sm);
+    margin-bottom: var(--spacing-xs);
+}
+
+.video-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background: #ff0000;
+    color: var(--white);
+    text-decoration: none;
+    border-radius: var(--radius-lg);
+    font-weight: 500;
+    transition: all var(--transition-fast);
+}
+
+.video-link:hover {
+    background: #cc0000;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.video-link i {
+    font-size: 1.25rem;
+}
+
 .status-card {
     background: var(--white);
     border-radius: var(--radius-xl);

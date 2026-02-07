@@ -40,106 +40,118 @@
 
     <!-- Status Content Section -->
     <section class="status-section">
-        <div class="container">
+        <div class="status-page">
+
             <!-- Header -->
-            <div class="status-header">
-                <h1 class="status-title">Status <span class="gradient-text">#1</span></h1>
-                <p class="status-subtitle">En statusoppdatering fra gruppe 8</p>
-                <p class="status-date">Sprint 1 - Sprint 2</p>
-                <div class="video-container" style="margin-top: 2rem;">
-                    <a href="https://youtu.be/6fzvIzKcy_0" target="_blank" class="video-link">
-                        <i class="fab fa-youtube"></i> Se vår status 1 video på YouTube
-                    </a>
+            <header class="status-hero">
+                <div class="status-hero-label">
+                    <span class="status-badge">Fullført</span>
                 </div>
-            </div>
+                <h1 class="status-hero-title">Status <span>#1</span></h1>
+                <p class="status-hero-subtitle">En statusoppdatering fra gruppe 8</p>
 
-            <!-- Oversikt -->
-            <div class="status-card">
-                <h2 class="card-title">Prosjektoversikt</h2>
-                <div class="info-grid">
-                    <div class="info-row">
-                        <span class="info-label">Prosjektnavn:</span>
-                        <span class="info-value">GeoMCP - KI-agent med GIS-verktøy</span>
+                <div class="status-meta">
+                    <div class="status-meta-item">
+                        <span class="meta-key">Prosjekt</span>
+                        <span class="meta-val">GeoMCP - KI-agent med GIS-verktøy</span>
                     </div>
-                    <div class="info-row">
-                        <span class="info-label">Bedrift:</span>
-                        <span class="info-value">Norkart</span>
+                    <div class="status-meta-item">
+                        <span class="meta-key">Bedrift</span>
+                        <span class="meta-val">Norkart</span>
                     </div>
-                    <div class="info-row">
-                        <span class="info-label">Periode:</span>
-                        <span class="info-value">7. Januar - 6. Februar</span>
+                    <div class="status-meta-item">
+                        <span class="meta-key">Periode</span>
+                        <span class="meta-val">7. Januar – 6. Februar</span>
                     </div>
-                    <div class="info-row">
-                        <span class="info-label">Status 1:</span>
-                        <span class="status-badge">Fullført</span>
+                    <div class="status-meta-item">
+                        <span class="meta-key">Sprint</span>
+                        <span class="meta-val">1 – 2</span>
                     </div>
                 </div>
+            </header>
+
+            <!-- Video -->
+            <div class="status-video-wrap">
+                <div class="status-video-embed">
+                    <iframe
+                        src="https://www.youtube.com/embed/6fzvIzKcy_0"
+                        title="Status 1 Video – Gruppe 8"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                <p class="status-video-caption">Status 1 video</p>
             </div>
 
-            <!-- Sammendrag -->
-            <div class="status-card">
-                <h2 class="card-title">Sammendrag</h2>
-                <p class="status-text">I startfasen har vi hatt flere nyttige møter med ansatte i Norkart og fått gode innspill fra Kartverket. Dette har gitt oss perspektiver innenfor ting vi ellers ikke har kunnskap rundt, særlig knyttet til KU-prosesser (konsekvensutredning) og veiledere som M-1941. Mye av tiden i starten har også gått i å sette oss inn i hvordan MCP og KI fungerer «under panseret», slik at vi kan koordinere arbeidet best mulig.</p>
-                <br> <p class="status-text">Gruppen har tatt i bruk Scrum-metodikk for å delegere ansvar og oppgaver, og benytter et Kanban board på Trello for oversikt over oppgaver og backlog. Oppgaver prioriteres gjennom planning poker, hvor gjennomsnittsverdien bestemmer hvor mange dager vi setter av til arbeidet. Hver sprint varer 2 uker.</p>
-                <p class="status-text">Gruppedynamikken er fabelaktig, hvor alle bidrar aktivt til både tanker og oppgaver. Gruppen oppleves som en generelt åpen arena, hvor det er lov å både kritisere og tøyse uten at noe tas nær. Det viktigste er tross alt å utfordre tankene, og argumentere for «hvorfor» valgene blir tatt.</p>
-                <br> <p class="status-text">Til nå har vi jobbet med å sette opp en prototype gis-mcp-server og en KI-agent som gjennom et python script kobler seg til og benytter seg av MCP-serveren sine GIS-analyse verktøy. Vi har i dag en enkel prototype der vi for eksempel kan spør agenten om å lage en buffersone rundt et par koordinater og vise resultatet på et kart.</p>
-            </div>
+            <!-- Main content -->
+            <article class="status-article">
 
-            <!-- Gjennomført Arbeid -->
-            <div class="status-card">
-                <h2 class="card-title">Gjennomført Arbeid</h2>
-                <ul class="status-list">
-                    <li>Satt opp en prototype GIS-MCP-server med totalt 98 verktøy</li>
-                    <li>Utviklet en KI-agent som kobler seg til og benytter MCP-serveren via Python-script</li>
-                    <li>Laget prototype for buffersone-funksjonalitet rundt koordinater med kartvisning</li>
-                    <li>Utviklet verktøy for å «chunke» store PDF-filer og konvertere til unicode</li>
-                    <li>Opprettet Figma wireframes og design for et potensiell UI</li>
-                    <li>Laget prototyper av ulike front-end grensesnitt</li>
-                    <li>Gjennomført møter med Norkart og fått innspill fra Kartverket</li>
-                    <li>Utforsket og tilegnet faglig kunnskap rundt KU-prosesser</li>
-                    <li>Etablert timelister og daglig loggføring for å holde oversikt</li>
-                    <li>Fullført status 1 innlevering</li>
-                </ul>
-            </div>
+                <!-- Sammendrag -->
+                <section class="status-block">
+                    <h2>Sammendrag</h2>
+                    <p>I startfasen har vi hatt flere nyttige møter med ansatte i Norkart og fått gode innspill fra Kartverket. Dette har gitt oss perspektiver innenfor ting vi ellers ikke har kunnskap rundt, særlig knyttet til KU-prosesser (konsekvensutredning) og veiledere som M-1941. Mye av tiden i starten har også gått i å sette oss inn i hvordan MCP og KI fungerer «under panseret», slik at vi kan koordinere arbeidet best mulig.</p>
+                    <p>Gruppen har tatt i bruk Scrum-metodikk for å delegere ansvar og oppgaver, og benytter et Kanban board på Trello for oversikt over oppgaver og backlog. Oppgaver prioriteres gjennom planning poker, hvor gjennomsnittsverdien bestemmer hvor mange dager vi setter av til arbeidet. Hver sprint varer 2 uker.</p>
+                    <p>Gruppedynamikken er fabelaktig, hvor alle bidrar aktivt til både tanker og oppgaver. Gruppen oppleves som en generelt åpen arena, hvor det er lov å både kritisere og tøyse uten at noe tas nær. Det viktigste er tross alt å utfordre tankene, og argumentere for «hvorfor» valgene blir tatt.</p>
+                    <p>Til nå har vi jobbet med å sette opp en prototype gis-mcp-server og en KI-agent som gjennom et python script kobler seg til og benytter seg av MCP-serveren sine GIS-analyse verktøy. Vi har i dag en enkel prototype der vi for eksempel kan spør agenten om å lage en buffersone rundt et par koordinater og vise resultatet på et kart.</p>
+                </section>
 
-            <!-- Pågående Arbeid -->
-            <div class="status-card">
-                <h2 class="card-title">Pågående Arbeid</h2>
-                <ul class="status-list">
-                    <li>Utforsker en MCP-Lite-server med ca. 20 verktøy per MCP-server for å benchmarke effektivitet og kostnad</li>
-                    <li>Testing av ulike MCP-konfigurasjoner med Docker og Python</li>
-                    <li>Videreutvikling av prototyper for MCP-servere og ulike LLM agenter</li>
-                    <li>Arbeid med systemarkitektur og integrasjon</li>
-                </ul>
-            </div>
+                <!-- Gjennomført Arbeid -->
+                <section class="status-block">
+                    <h2>Gjennomført arbeid</h2>
+                    <ul>
+                        <li>Satt opp en prototype GIS-MCP-server med totalt 98 verktøy</li>
+                        <li>Utviklet en KI-agent som kobler seg til og benytter MCP-serveren via Python-script</li>
+                        <li>Laget prototype for buffersone-funksjonalitet rundt koordinater med kartvisning</li>
+                        <li>Utviklet verktøy for å «chunke» store PDF-filer og konvertere til unicode</li>
+                        <li>Opprettet Figma wireframes og design for et potensiell UI</li>
+                        <li>Laget prototyper av ulike front-end grensesnitt</li>
+                        <li>Gjennomført møter med Norkart og fått innspill fra Kartverket</li>
+                        <li>Utforsket og tilegnet faglig kunnskap rundt KU-prosesser</li>
+                        <li>Etablert timelister og daglig loggføring for å holde oversikt</li>
+                        <li>Fullført status 1 innlevering</li>
+                    </ul>
+                </section>
 
-            <!-- Planlagt Arbeid -->
-            <div class="status-card">
-                <h2 class="card-title">Neste Steg</h2>
-                <ul class="status-list">
-                    <li>Finjustere logikken i KI-agenten for ulike LLM-er</li>
-                    <li>Videreutvikle GeoMCP-serveren med flere relevante verktøy</li>
-                    <li>Sørge for at agenten håndterer mer avanserte GIS-operasjoner uten feil</li>
-                    <li>Utvikle den visuelle prototypen basert på Figma-skissene</li>
-                    <li>Utforske og sette opp "Test-cases" mot LLM-er og GeoMCP</li>
-                </ul>
-            </div>
+                <!-- Pågående Arbeid -->
+                <section class="status-block">
+                    <h2>Pågående arbeid</h2>
+                    <ul>
+                        <li>Utforsker en MCP-Lite-server med ca. 20 verktøy per MCP-server for å benchmarke effektivitet og kostnad</li>
+                        <li>Testing av ulike MCP-konfigurasjoner med Docker og Python</li>
+                        <li>Videreutvikling av prototyper for MCP-servere og ulike LLM agenter</li>
+                        <li>Arbeid med systemarkitektur og integrasjon</li>
+                    </ul>
+                </section>
 
-            <!-- Utfordringer -->
-            <div class="status-card">
-                <h2 class="card-title">Utfordringer & Risiko</h2>
-                <p class="status-text">Siden oppgaven er teknisk krevende, har arbeidsmengden i perioder vært litt ujevnt fordelt. Til tider har det vært noen mindre effektive dager, men dette har blitt adressert i retrospektiv SCRUM etter Sprint 1. Løsningen var å dele opp oppgaver i mindre biter slik at det føles overkommelig å starte arbeidet.</p>
-                <p class="status-text">Det har vært viktig å ikke grave seg for dypt ned i tekniske detaljer for tidlig i prosessen, samtidig som vi holder tidslinjen i vår agile metodikk.</p>
-            </div>
+                <!-- Neste Steg -->
+                <section class="status-block">
+                    <h2>Neste steg</h2>
+                    <ul>
+                        <li>Finjustere logikken i KI-agenten for ulike LLM-er</li>
+                        <li>Videreutvikle GeoMCP-serveren med flere relevante verktøy</li>
+                        <li>Sørge for at agenten håndterer mer avanserte GIS-operasjoner uten feil</li>
+                        <li>Utvikle den visuelle prototypen basert på Figma-skissene</li>
+                        <li>Utforske og sette opp "Test-cases" mot LLM-er og GeoMCP</li>
+                    </ul>
+                </section>
 
-            <!-- Læring -->
-            <div class="status-card">
-                <h2 class="card-title">Læring & Refleksjon</h2>
-                <p class="status-text">Vi har lært mye om hvordan MCP og KI fungerer «under panseret», samt fått verdifull innsikt i KU-prosesser og veiledere som M-1941 gjennom møter med Norkart og Kartverket.</p>
-                <p class="status-text">Scrum-metodikken har hjulpet oss med å holde struktur og delegere ansvar effektivt. Planning poker har gitt oss en rettferdig måte å prioritere oppgaver på.</p>
-                <p class="status-text">Vi er bevisste på å unngå utbrenthet med faste pauser og sosiale avbrekk. Sammen med gruppe 7 har vi arrangert alt fra Kahoot til Nintendo Switch-konkurranser. Disse pausene har gjort oss til en sammensveiset gjeng og påvirker arbeidseffektiviteten positivt.</p>
-            </div>
+                <!-- Utfordringer -->
+                <section class="status-block">
+                    <h2>Utfordringer &amp; risiko</h2>
+                    <p>Siden oppgaven er teknisk krevende, har arbeidsmengden i perioder vært litt ujevnt fordelt. Til tider har det vært noen mindre effektive dager, men dette har blitt adressert i retrospektiv SCRUM etter Sprint 1. Løsningen var å dele opp oppgaver i mindre biter slik at det føles overkommelig å starte arbeidet.</p>
+                    <p>Det har vært viktig å ikke grave seg for dypt ned i tekniske detaljer for tidlig i prosessen, samtidig som vi holder tidslinjen i vår agile metodikk.</p>
+                </section>
 
+                <!-- Læring -->
+                <section class="status-block">
+                    <h2>Læring &amp; refleksjon</h2>
+                    <p>Vi har lært mye om hvordan MCP og KI fungerer «under panseret», samt fått verdifull innsikt i KU-prosesser og veiledere som M-1941 gjennom møter med Norkart og Kartverket.</p>
+                    <p>Scrum-metodikken har hjulpet oss med å holde struktur og delegere ansvar effektivt. Planning poker har gitt oss en rettferdig måte å prioritere oppgaver på.</p>
+                    <p>Vi er bevisste på å unngå utbrenthet med faste pauser og sosiale avbrekk. Sammen med gruppe 7 har vi arrangert alt fra Kahoot til Nintendo Switch-konkurranser. Disse pausene har gjort oss til en sammensveiset gjeng og påvirker arbeidseffektiviteten positivt.</p>
+                </section>
+
+            </article>
         </div>
     </section>
 
